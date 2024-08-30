@@ -98,7 +98,7 @@ $(function () {
             { name: 'Northwestern', label: 'Северо-Западный федеральный округ', isPhoto: false },
             { name: 'South', label: 'Южный Федеральный округ', isPhoto: true },
             { name: 'Kavkaz', label: 'Северо-Кавказский федеральный округ', isPhoto: false },
-            { name: 'Central', label: 'Центральный Федеральный округ', isPhoto: false }
+            { name: 'Central', label: 'Центральный Федеральный округ', isPhoto: false },
       ]
 
       //инициализация подсказок
