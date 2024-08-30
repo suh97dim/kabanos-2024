@@ -198,6 +198,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 window.addEventListener("load", function () {
       $(".left-side-img1").addClass('left-side-img1-anim')
       $(".left-side-img2").addClass('left-side-img2-anim')
+      $(".main-img-wrapper").addClass('main-banner-anim')
 });
 
 const swiper = new Swiper('.swiper-products', {

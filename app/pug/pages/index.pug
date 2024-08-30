@@ -14,7 +14,9 @@ block content
             p.fs-medium.c-blue.text-center.fw-medium 01 сентября по 27 октября
             h1.c-dark-blue.text-center Узнавай Россию с
             +img('kabanos-logo.svg', '','banner-svg mx-a')
-            +img('main-img.png', '','banner-img mx-a')
+            .main-img-wrapper.mx-a 
+                //- +img('main-img-bg.png', '','banner-img-bg ')
+                +img('main-img.png', '','banner-img mx-a')
         .banner-buttons-wrapper
             a.btn.btn-white(href="") Зарегистрировать чек
             a.btn.btn-blue.mt-12
@@ -129,8 +131,8 @@ block content
                     .col.d-flex.p-0
                         +img("icons/photo-in-header.svg",'',' d-block mr-20','50')
                         h2.c-orange Фото-конкурс
-                       
-                       
+
+
                     ol.mt-16.c-white
                         li Поделись своей интересной фотографией из путешествия по России с Kabanos
                         li Собирай лайки от других участников
@@ -165,7 +167,7 @@ block content
                             p.fs-medium.c-blue П****** М******
                             p.fs-medium.c-blue.fw-bold Махачкала Цитадель Нарын-Кала
                             .like 
-                                    button(action="#").like-btn.active 24
+                                button(action="#").like-btn.active 24
                 .col-sm-6.col-lg-4.mb-12.mb-sm-24
                     .story-item 
                         .story-img(style="background-image:url('img/image.jpg')")
@@ -174,7 +176,7 @@ block content
                             p.fs-medium.c-blue П****** М******
                             p.fs-medium.c-blue.fw-bold Махачкала Цитадель Нарын-Кала
                             .like 
-                                    button(action="#").like-btn.active 24
+                                button(action="#").like-btn.active 24
                 .col-sm-6.col-lg-4.mb-12.mb-sm-24
                     .story-item 
                         .story-img(style="background-image:url('img/image.jpg')")
@@ -183,7 +185,7 @@ block content
                             p.fs-medium.c-blue П****** М******
                             p.fs-medium.c-blue.fw-bold Махачкала Цитадель Нарын-Кала
                             .like 
-                                    button(action="#").like-btn.active 24
+                                button(action="#").like-btn.active 24
                 .col-12.mt-12.mt-lg-0
                     <ul class="pagination history-main-pagination" style="justify-content:center">
                         <li class="paginate_button page-item active">
@@ -201,21 +203,21 @@ block content
                 .swiper-products
                     .swiper-wrapper
                         .swiper-slide.text-center
-                            +img('products/product-1.png','','img-fluid')
+                            +img('products/product-1.png','','img-fluid slider-img')
                             p.fs-medium.c-white.mt-20.text-center KABANOS Chicken
                         .swiper-slide 
-                            +img('products/product-2.png','','img-fluid')
+                            +img('products/product-2.png','','img-fluid slider-img-1')
                             p.fs-medium.c-white.mt-20.text-center KABANOS Cheese
                         .swiper-slide 
-                            +img('products/product-3.png','','img-fluid')
+                            +img('products/product-3.png','','img-fluid slider-img')
                             p.fs-medium.c-white.mt-20.text-center KABANOS Лисички
                         .swiper-slide 
-                            +img('products/product-4.png','','img-fluid')
+                            +img('products/product-4.png','','img-fluid slider-img-1')
                             p.fs-medium.c-white.mt-20.text-center KABANOS Classic
                         .swiper-slide 
-                            +img('products/product-5.png','','img-fluid')
+                            +img('products/product-5.png','','img-fluid slider-img')
                             p.fs-medium.c-white.mt-20.text-center KABANOS Chili
-                  
+
                     .swiper-pagination
     #buy.container-fluid.py-60.py-md-80.px-0
         .row.no-gutters      

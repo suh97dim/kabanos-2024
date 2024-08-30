@@ -108,7 +108,6 @@ h6
 	p
 		margin: 0
 
-
 .like-btn
 	padding-left: 24px
 	border: none
@@ -155,10 +154,72 @@ h6
 	width: 520px
 	display: block
 	margin-top: -10px
-.banner-img
-	width: 1005px
-	display: block
-	margin-top: 20px
+.main-img-wrapper
+	position: relative
+	width: max-content
+	background-image: url('../img/main-img-bg.png')
+	background-size: contain
+	padding-top: 20px
+	background-repeat: no-repeat
+
+	.banner-img-bg
+		width: 1005px
+
+		position: absolute
+		top: 0
+		z-index: 0
+	.banner-img
+		width: 1005px
+		display: block
+.main-banner-anim
+	animation-duration: 3s
+	animation-name: kolbaski
+	background-position-y: 0
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+.slider-img
+	animation-duration: 3s
+	animation-name: kolbaski-in-slider-1
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+
+	transform: scale(0.95)
+.slider-img-1
+	animation-duration: 3s
+	animation-name: kolbaski-in-slider-2
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+
+	transform: scale(0.95)
+@keyframes kolbaski-in-slider-1
+	0%
+		transform: scale(0.95)
+
+	50%
+		transform: scale(1)
+
+	100%
+		transform: scale(0.95)
+@keyframes kolbaski-in-slider-2
+	0%
+		transform: scale(1)
+
+	50%
+		transform: scale(0.95)
+
+	100%
+		transform: scale(1)
+
+@keyframes kolbaski
+	0%
+		background-position-y: 0px
+
+	50%
+		background-position-y: 20px
+
+	100%
+		background-position-y: 0px
+
 .left-side-img1
 	margin-left: auto
 	margin-right: auto
@@ -626,8 +687,10 @@ ol li:before
 			font-size: 6vw
 	.banner-svg
 		width: 50vw
-	.banner-img
+	.main-img-wrapper
 		width: 100%
+		.banner-img
+			width: 100%
 	.marquee-wrap
 		gap: 12px
 	.marquee-img
@@ -803,8 +866,10 @@ ol li:before
 			font-size: 7vw
 	.banner-svg
 		width: 55vw
-	.banner-img
+	.main-img-wrapper
 		width: 100%
+		.banner-img
+			width: 100%
 	.prize-mp
 		.counter
 			font-size: 14px
