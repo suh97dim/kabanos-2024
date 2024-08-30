@@ -1,0 +1,173 @@
+.modal#modal-enter
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                h2.text-center.c-blue Вход
+                form.row.needs-validation.mt-24(novalidate)
+                    .col-12.mb-16.pos-r
+                        .form-floating
+                            input(type="text" placeholder="Номер телефона" required  id="phone" ).form-control.mask-phone
+                            label(for="phone") Номер телефона
+                            .invalid-feedback Обязательное поле
+                    .col-12.mb-16.pos-r
+                        .form-floating
+                            input(type="password" placeholder="Пароль" required  id="password" ).form-control
+                            label(for="password") Пароль
+                            .invalid-feedback Обязательное поле
+                    .col-12.mb-16.mb-md-24
+                        a(href="#modal-recovery").js-change-modal.modal-link.text-end.w-100 Забыли пароль?
+                    .col-12.mb-16.mb-md-24
+                        button.btn.btn-blue.w-100.px-0(type="submit")  Войти 
+                .row
+                    .col-12 
+                        p.fs-medium.text-center.c-blue.mb-10 Еще нет аккаунта? 
+                        a(href="#modal-reg").js-change-modal.modal-link-lg.text-center Зарегистрируйтесь
+
+
+.modal#modal-reg
+    .modal-dialog.modal-lg.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                h2.text-center.c-blue Регистрация
+                form.row.needs-validation.mt-24(novalidate)
+                    .col-sm-6.mb-16.mb-md-24.pos-r
+                        .form-floating
+                            input(type="text" placeholder="Фамилия" required  id="fio" ).form-control
+                            label(for="fio") Фамилия 
+                            .invalid-feedback Обязательное поле
+                    .col-sm-6.mb-16.mb-md-24.pos-r
+                        .form-floating
+                            input(type="text" placeholder="Имя" required  id="name" ).form-control
+                            label(for="name") Имя
+                            .invalid-feedback Обязательное поле
+                    .col-sm-6.mb-16.mb-md-24.pos-r
+                        .form-floating
+                            input(type="date" placeholder="Дата рождения" required  id="date" ).form-control
+                            label(for="date") Дата рождения
+                            .invalid-feedback Обязательное поле
+                    .col-sm-6.mb-16.mb-md-24.pos-r
+                        .form-floating
+                            input(type="text" placeholder="Город рождения" required  id="city" ).form-control
+                            label(for="city") Город рождения
+                            .invalid-feedback Обязательное поле
+                    .col-sm-6.mb-16.mb-md-24.pos-r
+                        .form-floating
+                            input(type="text" placeholder="Номер телефона" required  id="phone" ).form-control.mask-phone
+                            label(for="phone") Номер телефона
+                            .invalid-feedback Обязательное поле
+                    .col-sm-6.mb-16.mb-md-24.pos-r
+                        .form-floating
+                            input(type="email" placeholder="E-mail" required  id="email" ).form-control
+                            label(for="email") E-mail
+                            .invalid-feedback Обязательное поле
+                    .col-12.mb-2.pos-r
+                        .form-check
+                            input( type="checkbox" value="" id="agreement" required).form-check-input
+                            label( for="agreement").form-check-label Я даю <a href=""> согласие </a> на обработку моих персональных данных
+                            .invalid-feedback.checkbox Обязательное поле
+                    .col-12.mb-2.pos-r
+                        .form-check
+                            input( type="checkbox" value="" id="agreement" required).form-check-input
+                            label( for="agreement").form-check-label Я ознакомлен и согласен с <a href=""> пользовательским соглашением </a> и <a href="">политикой конфиденциальности  </a>
+                            .invalid-feedback.checkbox Обязательное поле
+                    .col-12.mb-2.pos-r
+                        .form-check
+                            input( type="checkbox" value="" id="agreement" required).form-check-input
+                            label( for="agreement").form-check-label Я ознакомлен и согласен с <a href=""> правилами акции </a>
+                            .invalid-feedback.checkbox Обязательное поле
+                    .col-12.mb-2.pos-r
+                        .form-check
+                            input( type="checkbox" value="" id="agreement" required).form-check-input
+                            label( for="agreement").form-check-label  <a href=""> Мне уже есть 18 лет</a>
+                            .invalid-feedback.checkbox Обязательное поле
+                    .col-12.my-24
+                        button.btn.btn-blue.w-100.px-0(type="submit")  Зарегистрироваться 
+
+                .row
+                    .col-12 
+                        p.fs-medium.text-center.c-blue.mb-10 Если вы уже регистрировались, то вам необходимо
+                        a(href="#modal-enter").js-change-modal.modal-link-lg.text-center Войти
+
+
+
+.modal#modal-recovery
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                h4.text-center.c-blue Восстановление пароля
+                form.row.needs-validation.mt-24(novalidate)
+                    .col-12.mb-16.mb-md-24
+                        .form-floating
+                            input(type="text" placeholder="Номер телефона" required  id="phone" ).form-control.mask-phone
+                            label(for="phone") Номер телефона
+                            .invalid-feedback Обязательное поле
+                    .col-12.mb-16.mb-md-24
+                        button.btn.btn-blue.w-100.px-0(type="submit")  Восстановить пароль
+                .row
+                    .col-12 
+                    a(href="#modal-reg").js-change-modal.modal-link-lg.text-center Войти 
+
+.modal#modal-success-reg
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                h4.text-center.c-blue Вы зарегистрировались
+                .row.mt-12
+                    .col-12.mt-4.mt-md-10
+                        p.fs-medium.text-center.c-blue.mb-10 На указанный вами телефон отправлен пароль для доступа в личный кабинет
+                    .col-12.mt-16.mt-md-24
+                        a(href="#modal-reg").js-change-modal.btn.btn-blue.w-100.px-0  Войти 
+
+
+.modal#modal-fiskal
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                h4.text-center.c-blue Фискальные знаки на чеке
+                    +img("fiskal.jpg",'','img-fluid mt-24').
+
+.modal#error
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                h4.text-center.c-blue Ошибка
+                .row.mt-12
+                    .col-12.mt-4.mt-md-10
+                        p.fs-medium.text-center.c-blue.mb-10 Текст ошибки
+
+.modal#modal-history
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-body
+                button(type="button" data-bs-dismiss="modal" aria-label="Close").close
+                    +img('icons/close.svg', 'close-ic')
+                h3.text-center.c-blue Новая история
+                form.row.needs-validation.mt-24(novalidate)
+                    .col-12.mb-16.pos-r
+                        .form-floating
+                            input(type="text" placeholder="Город" required  id="city" ).form-control
+                            label(for="phone") Город
+                            .invalid-feedback Обязательное поле
+                    .col-12.mb-16.pos-r
+                        .form-floating
+                            input(type="text" placeholder="Название достопримечательности" required  id="name" ).form-control
+                            label(for="name") Название достопримечательности
+                            .invalid-feedback Обязательное поле
+                    .col-sm-12.mb-24
+                        .upload-one
+                            <input  class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                    .col-12.mb-16.mb-md-24
+                        button.btn.btn-blue.w-100.px-0(type="submit")  Отправить на модерацию
+

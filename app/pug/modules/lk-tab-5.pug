@@ -1,0 +1,211 @@
+.lk-content
+    .row.justify-content-center
+        .col-12.mt-20.mt-md-32  
+            .lk-attention
+                +img("icons/attention.svg" )
+                p.fs-medium.c-blue Персональные данные требуются в соответствии законом для уплаты налогов при получении призов на общую сумму свыше 4000 рублей. <strong> Налог оплачивает Организатор </strong>. Если общая сумма призов составляет меньше 4000 рублей - добавлять персональные данные не обязательно. Для получения призов на сумму более 4000 рублей предоставление персональных данных является обязательным.
+
+        /////////////// Заполненные данные
+        .col-12.mt-32.mt-md-64 
+            h3.text-center.c-blue Персональные данные
+        .lk-form.mt-20.mt-md-32
+            form.row.needs-validation(novalidate)
+                .col-sm-6.mb-16.mb-md-24.pos-r
+                    .form-floating
+                        input(type="text" placeholder="Фамилия" required  id="fio" value="Дмитрий" disabled readonly).form-control
+                        label(for="fio") Фамилия 
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.mb-16.mb-md-24.pos-r
+                    .form-floating
+                        input(type="text" placeholder="Имя" required  id="name" value="Сухов" disabled readonly ).form-control
+                        label(for="name") Имя 
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.mb-16.mb-md-24.pos-r
+                    .form-floating
+                        input(type="text" placeholder="Отчество" required  id="patronymic" value="Отчество"  disabled readonly ).form-control
+                        label(for="patronymic") Отчество
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.mb-16.mb-md-24.pos-r
+                    .form-floating
+                        input(type="date" placeholder="Дата рождения" required  id="date" value="16.04.1997" disabled readonly).form-control
+                        label(for="date") Дата рождения
+                        .invalid-feedback Обязательное поле
+                .col-sm-6
+                    .form-floating
+                        input(type="text" placeholder="Адреc проживания" required  id="adress" value="Миндяк" disabled readonly).form-control
+                        label(for="adress") Адреc проживания
+                        .invalid-feedback Обязательное поле
+                .col-sm-6
+                    .radio-wrap
+                        .text-label Пол:
+                        label(for="male").radio-label
+                            input(type="radio" value="Муж" checked name="gender" id="male" disabled ).radio-input 
+                            | Мужской
+                        label(for="female").radio-label
+                            input(type="radio" value="Жен" name="gender" id="female" ).radio-input
+                            | Женский
+
+        /////////////// Раздел содержит личные данные Участника: Универсальные поля для всех участников, не зависимо от стоимости выигранных призов:
+
+        .col-12.mt-32.mt-md-64 
+            h3.text-center.c-blue Персональные данные
+        .lk-form.mt-20.mt-md-32
+            form.row.needs-validation(novalidate)
+                .col-sm-6.mb-16.mb-md-24.pos-r
+                    .form-floating
+                        input(type="text" placeholder="Фамилия" required  id="fio" ).form-control
+                        label(for="fio") Фамилия 
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.mb-16.mb-md-24.pos-r
+                    .form-floating
+                        input(type="text" placeholder="Имя" required  id="name"  ).form-control
+                        label(for="name") Имя 
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.mb-16.mb-md-24.pos-r
+                    .form-floating
+                        input(type="text" placeholder="Отчество" required  id="patronymic"  ).form-control
+                        label(for="patronymic") Отчество
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.mb-16.mb-md-24.pos-r
+                    .form-floating
+                        input(type="date" placeholder="Дата рождения" required  id="date" ).form-control
+                        label(for="date") Дата рождения
+                        .invalid-feedback Обязательное поле
+                .col-sm-6
+                    .form-floating
+                        input(type="text" placeholder="Адреc проживания" required  id="adress" ).form-control
+                        label(for="adress") Адреc проживания
+                        .invalid-feedback Обязательное поле
+                .col-sm-6
+                    .radio-wrap
+                        .text-label Пол:
+                        label(for="male").radio-label
+                            input(type="radio" value="Муж" checked name="gender" id="male"  ).radio-input 
+                            | Мужской
+                        label(for="female").radio-label
+                            input(type="radio" value="Жен" name="gender" id="female" ).radio-input
+                            | Женский    
+
+
+                ///// Если Участник выиграл вещественный приз, открывается следующий блок полей для заполнения:
+
+                .col-12.mt-30.mt-md-50.mb-16.mb-md-24 
+                    h5.text-center.c-blue Адрес доставки призов
+                .col-sm-6.mb-16.mb-md-24.pos-r
+                    .form-floating
+                        input(type="text" placeholder="Название населенного пункта" required  id="city" ).form-control
+                        label(for="city") Название населенного пункта
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="text" placeholder="Улица" required  id="street" ).form-control
+                        label(for="street") Улица
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.col-md-4.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="text" placeholder="№ дома" required  id="number-home" ).form-control
+                        label(for="number-home") № дома
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.col-md-4.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="text" placeholder="№ строения" required  id="number-stroenie" ).form-control
+                        label(for="number-stroenie") № строения
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.col-md-4.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="text" placeholder=" № кв" required  id="number-flat" ).form-control
+                        label(for="number-flat")  № кв
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.mb-16.mb-md-24.pos-r
+                    .form-floating
+                        input(type="number" placeholder="Серия" required  id="passport-series" ).form-control
+                        label(for="passport-series") Серия
+                        .invalid-feedback Обязательное поле
+                .col-sm-6
+                    .form-floating
+                        input(type="number" placeholder="Номер" required  id="passport-number" ).form-control
+                        label(for="passport-number") Номер
+                        .invalid-feedback Обязательное поле
+
+                // Данные для уплаты налогов
+                .col-12.mt-30.mt-md-50
+                    h3.text-center.c-blue Данные для уплаты налогов
+                .col-12.mt-16.mt-md-30.mb-16.mb-md-24 
+                    h5.text-center.c-blue Паспортные данные
+                .col-sm-6.col-md-4.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="number" placeholder="Серия" required  id="passport-series" ).form-control
+                        label(for="passport-series")  Серия
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.col-md-4.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="number" placeholder="Номер" required  id="number" ).form-control
+                        label(for="passport-number")  Номер
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.col-md-4.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="date" placeholder="Дата выдачи" required  id="passport-date" ).form-control
+                        label(for="passport-date") Дата выдачи
+                        .invalid-feedback Обязательное поле       
+                .col-12
+                    .form-floating
+                        input(type="text" placeholder="Кем выдан" required  id="passport-issue" ).form-control
+                        label(for="passport-issue") Кем выдан
+                        .invalid-feedback Обязательное поле       
+                    p.fs-small.c-bold.mt-8 заполнять в точности так, как указано в паспорте, включая заглавные буквы и пробелы
+
+                // Адрес Прописки
+                .col-12.mt-16.mt-md-30.mb-16.mb-md-24 
+                    h5.text-center.c-blue Адрес Прописки
+                        span.info-icon.ml-12(data-bs-toggle="tooltip" data-bs-placement="bottom" title="Адрес из актуальной прописки или временной регистрации")
+                            +img('icons/info.svg','' ,'mb-5','' )
+                .col-sm-6.mb-16.mb-md-24.pos-r
+                    .form-floating
+                        input(type="text" placeholder="Название населенного пункта" required  id="city" ).form-control
+                        label(for="city") Название населенного пункта
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="text" placeholder="Улица" required  id="street" ).form-control
+                        label(for="street") Улица
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.col-md-4.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="text" placeholder="№ дома" required  id="number-home" ).form-control
+                        label(for="number-home") № дома
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.col-md-4.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="text" placeholder="№ строения" required  id="number-stroenie" ).form-control
+                        label(for="number-stroenie") № строения
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.col-md-4.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="text" placeholder=" № кв" required  id="number-flat" ).form-control
+                        label(for="number-flat")  № кв
+                        .invalid-feedback Обязательное поле
+                .col-sm-6.mb-16.mb-md-24
+                    .upload-one
+                        .file-subtitle.mb-8 Фото паспорта, 1 разворот:
+                            span.info-icon.ml-8(data-bs-toggle="tooltip" data-bs-placement="bottom" title="Фотография должна содержать страницу с фото, информацию об органе, выдавшем паспорт, дате выдачи документа, а также серию и номер паспорта. Фото в паспорте необходимо скрыть любым доступным образом. Формат файла – jpg или png.")
+                                +img('icons/info.svg','' ,'mb-2','' )
+                        <input  class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                .col-sm-6.mb-16.mb-md-24
+                    .upload-one
+                        .file-subtitle.mb-8 Фото паспорта, прописка
+                            span.info-icon.ml-8(data-bs-toggle="tooltip" data-bs-placement="bottom" title="На фото должна быть информация об актуальной регистрации и серия и номер паспорта внизу страницы. Формат файла – jpg или png.")
+                                +img('icons/info.svg','' ,'mb-2','' )
+                        <input  class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                .col-sm-6.mb-16.mb-md-0
+                    .upload-one
+                        .file-subtitle.mb-8 Фото ИНН
+                            span.info-icon.ml-8(data-bs-toggle="tooltip" data-bs-placement="bottom" title="Можно приложить фотографию оригинала свидетельства ИНН физического лица или скриншот с сайта ФНС с отображением фамилии, имени, отчества и номера ИНН. Формат файла – jpg или png.")
+                                +img('icons/info.svg','' ,'mb-2','' )
+                        <input  class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                .col-sm-6.pos-r.d-flex.align-items-end  
+                    .form-floating.w-100  
+                        input(type="number" placeholder=" ИНН" required  id="inn" ).form-control
+                        label(for="inn")  ИНН
+                        .invalid-feedback Обязательное поле
+                .col.mt-32.pos-r
+                    button.btn.btn-blue.mx-a(type="submit") Сохранить данные

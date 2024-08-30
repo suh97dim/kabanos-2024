@@ -1,0 +1,91 @@
+.lk-content
+    #noCheck.row
+        .col-12.mt-32.mt-md-60.mt-lg-80 
+            h3.text-center.c-blue Заявки 
+        .col-12.my-25.my-md-50
+            +img("icons/check-not-upload.svg",'','mx-a d-block','40')
+            p.fs-large.c-blue.text-center.mt-24 Здесь будет история ваших заявок
+    #isCheck.row
+        .col-12.mt-32.mt-md-60.mt-lg-80 
+            h3.text-center.c-blue Заявки 
+        .col.mt-16.mt-md-32
+            table#tableApplications
+                thead 
+                    tr
+                        th Дата и время заявки
+                        th № заявки
+                        th Тип приза
+                        th Дата розыгрыша 
+                        th Статус
+                tbody 
+                    tr
+                        td 14.12.2023, 18:00
+                        td №32323
+                        td Ежемесячный
+                        td 14.12.2023
+                        td Ожидает розыгрыша
+                    tr
+                        td 14.12.2023, 18:00
+                        td №32323
+                        td Ежемесячный
+                        td 14.12.2023
+                        td Ожидает розыгрыша
+                    tr
+                        td 14.12.2023, 18:00
+                        td №32323
+                        td Ежемесячный
+                        td 14.12.2023
+                        td Ожидает розыгрыша
+                    tr
+                        td 14.12.2023, 18:00
+                        td №32323
+                        td Ежемесячный
+                        td 14.12.2023
+                        td Ожидает розыгрыша
+                    tr
+                        td 14.12.2023, 18:00
+                        td №32323
+                        td Ежемесячный
+                        td 14.12.2023
+                        td Ожидает розыгрыша
+                    tr
+                        td 14.12.2023, 18:00
+                        td №32323
+                        td Ежемесячный
+                        td 14.12.2023
+                        td Не выиграла
+                    tr
+                        td 14.12.2023, 18:00
+                        td №32323
+                        td Ежемесячный
+                        td 14.12.2023
+                        td Выиграла
+        .col-12.mt-16.mt-md-32
+            .application 
+                .row.d-flex.justify-conter-between
+                    .col-md-4
+                        .application-desc
+                            .counter x2 
+                            +img("application-img.png",'','','')
+                            .label =
+                            span.ml-16
+                                p.fs-small.c-light-blue Заявка на розыгрыш 
+                                .title Еженедельных <br> призов
+                    .col-md-4
+                        .application-desc
+                            .counter x5 
+                            +img("application-img.png",'','','')
+                            .label =
+                            span.ml-16
+                                p.fs-small.c-light-blue Заявка на розыгрыш 
+                                .title ежемесячных <br> призов
+                    .col-md-4
+                        .application-desc
+                            .counter x10
+                            +img("application-img.png",'','','')
+                            .label =
+                            span.ml-16
+                                p.fs-small.c-light-blue Заявка на розыгрыш 
+                                .title главного приза
+                    .col-12.mx-a.d-flex.justify-content-center.my-16.my-md-30
+                        .status.status_wait Заявки формируются в момент подтверждения чека Организатором.

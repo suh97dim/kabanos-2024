@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="msapplication-TileColor" content="undefined">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="msapplication-TileImage" content="">
+    <meta name="theme-color" content="undefined">
+    <meta name="msapplication-navbutton-color" content="undefined">
+    <meta name="apple-mobile-web-app-status-bar-style" content="undefined">
+    <meta name="description" content="undefined">
+    <title>Фотоконкурс</title>
+    <link type="image/x-icon" href="favicon.ico" rel="icon">
+    <link type="image/svg+xml" href="#" rel="icon">
+    <link href="#" rel="apple-touch-icon">
+    <link href="#" color="undefined" rel="mask-icon">
+    <link type="text/css" href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/datepicker-bootstrap/datepicker.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/croppie/croppie.css" rel="stylesheet">
+    <link type="text/css" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet">
+    <link type="text/css" href="libs/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/fancybox/fancybox.css" rel="stylesheet">
+    <link type="text/css" href="css/main.min.css" rel="stylesheet">
+    <body class="lk-page"></body>
+    <endif></endif>
+    <div class="o-h pos-r">
+      <header class="page-header">
+        <div class="container header-container"> 
+          <div class="row ai-c jc-sb">
+            <div class="col-auto d-xll-n">
+              <button class="hamburger js-hamburger collapsed" type="button" data-toggle="collapse" data-target=".page-header-menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+            </div>
+            <div class="col-auto"><a href="/"><img class="logo-img" src="img/logo.svg" alt="Логотип"/></a></div>
+            <div class="col-auto page-header-menu collapse">
+              <ul class="nav nav-header">
+                <li class="nav-item"><a class="nav-link-header" href="/#rules">Правила</a></li>
+                <li class="nav-item"><a class="nav-link-header mt-100" href="/#prizes">Призы</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="/#photo">Фотоконкурс</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="/#product">Продукция</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="/#buy">Где купить</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="/#faq">Вопросы и ответы</a></li>
+              </ul>
+            </div>
+            <div class="col-auto"><a type="button"><img src="img/icons/user.svg" alt="Войти"/><span class="d-none d-xl-inline nav-link-header ml-10">Выйти</span></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container mt-40">
+        <div class="row">
+          <div class="col"> 
+            <h1 class="text-center c-blue">Фотоконкурс</h1>
+          </div>
+          <div class="cream-bg-content mt-12 mt-md-24">
+            <!-- фото нет-->
+            <div class="row" id="notPhoto">
+              <div class="col-12 my-25 my-md-50"><img class="mx-a d-block" src="img/icons/photo-not-upload.svg" alt="" width="40"/>
+                <p class="fs-large c-blue text-center mt-24">Здесь будет истории  участников конкурса</p>
+              </div>
+            </div>
+            <!-- фото загружены. пользователь авторизован-->
+            <div class="row" id="isPhotoAuth">
+              <div class="col-sm-6 col-lg-4 mb-12 mb-sm-24">
+                <div class="story-item"> 
+                  <div class="story-img" style="background-image:url('img/image.webp')"><a class="play-image" href="img/image.webp" data-fancybox="image"> </a></div>
+                  <div class="story-details"> 
+                    <p class="fs-medium c-blue">П****** М******</p>
+                    <p class="fs-medium c-blue fw-bold">Махачкала Цитадель Нарын-Кала</p>
+                    <div class="like"> 
+                      <button class="like-btn active" action="#">24</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-12 mb-sm-24">
+                <div class="story-item"> 
+                  <div class="story-img" style="background-image:url('img/image.webp')"><a class="play-image" href="img/image.webp" data-fancybox="image"> </a></div>
+                  <div class="story-details"> 
+                    <p class="fs-medium c-blue">П****** М******</p>
+                    <p class="fs-medium c-blue fw-bold">Махачкала Цитадель Нарын-Кала</p>
+                    <div class="like"> 
+                      <button class="like-btn active" action="#">24</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-12 mb-sm-24">
+                <div class="story-item"> 
+                  <div class="story-img" style="background-image:url('img/image.webp')"><a class="play-image" href="img/image.webp" data-fancybox="image"> </a></div>
+                  <div class="story-details"> 
+                    <p class="fs-medium c-blue">П****** М******</p>
+                    <p class="fs-medium c-blue fw-bold">Махачкала Цитадель Нарын-Кала</p>
+                    <div class="like"> 
+                      <button class="like-btn active" action="#">24</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-12 mt-lg-0"><ul class="pagination history-pagination" style="justify-content:center">
+<li class="paginate_button page-item active">
+<a href="#" aria-controls="appl" aria-role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a>
+</li>
+<li class="paginate_button page-item ">
+<a href="#" aria-controls="appl" aria-role="link" data-dt-idx="1" tabindex="0" class="page-link">2</a>
+</li>
+</ul>
+              </div>
+            </div>
+            <!-- фото загружены. пользователь не авторизован-->
+            <div class="row" id="isPhotoAuth">
+              <div class="col-12 mb-16 mb-md-24 mb-lg-32"> 
+                <div class="lk-info-block">    
+                  <p class="fs-large c-white"><a (type="button" data-bs-toggle="modal" data-bs-target="#modal-reg")> Зарегистрируйся</a>  чтобы проголосвать за понравившуюся фотографию </p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-12 mb-sm-24">
+                <div class="story-item"> 
+                  <div class="story-img" style="background-image:url('img/image.webp')"><a class="play-image" href="img/image.webp" data-fancybox="image"> </a></div>
+                  <div class="story-details"> 
+                    <p class="fs-medium c-blue">П****** М******</p>
+                    <p class="fs-medium c-blue fw-bold">Махачкала Цитадель Нарын-Кала</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-12 mb-sm-24">
+                <div class="story-item"> 
+                  <div class="story-img" style="background-image:url('img/image.webp')"><a class="play-image" href="img/image.webp" data-fancybox="image"> </a></div>
+                  <div class="story-details"> 
+                    <p class="fs-medium c-blue">П****** М******</p>
+                    <p class="fs-medium c-blue fw-bold">Махачкала Цитадель Нарын-Кала</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-12 mb-sm-24">
+                <div class="story-item"> 
+                  <div class="story-img" style="background-image:url('img/image.webp')"><a class="play-image" href="img/image.webp" data-fancybox="image"> </a></div>
+                  <div class="story-details"> 
+                    <p class="fs-medium c-blue">П****** М******</p>
+                    <p class="fs-medium c-blue fw-bold">Махачкала Цитадель Нарын-Кала</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-12 mt-lg-0"><ul class="pagination history-pagination" style="justify-content:center">
+<li class="paginate_button page-item active">
+<a href="#" aria-controls="appl" aria-role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a>
+</li>
+<li class="paginate_button page-item ">
+<a href="#" aria-controls="appl" aria-role="link" data-dt-idx="1" tabindex="0" class="page-link">2</a>
+</li>
+</ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container"> 
+          <div class="row align-items-center">
+            <div class="col-12 col-xl-4"><a class="footer-link-lg text-center text-xl-start mt-30 mt-xl-0" href="#">Полные правила акции </a></div>
+            <div class="col-12 col-xl-4 order-first order-xl-0"><img class="footer-logo mx-a" src="img/kabanos-logo-white.svg" alt=""/>
+            </div>
+            <div class="col-12 col-xl-4 mt-30 mt-xl-0">
+              <div class="social-icons"> <a href="#" target="_blank"><img src="img/icons/tg.svg" alt="Телеграм"/></a><a href="#" target="_blank"><img src="img/icons/youtube.svg" alt="Youtube"/></a><a href="#" target="_blank"><img src="img/icons/vk.svg" alt="Youtube"/></a><a href="#" target="_blank"><img src="img/icons/odnoklassniki.svg" alt="Youtube"/></a></div>
+            </div>
+          </div>
+          <div class="row">               
+            <div class="col-12"><a class="footer-link-lg-blue text-center my-30 my-xl-50" href="#">help@kabanos-promo.ru</a></div>
+            <div class="col-12"><a class="footer-link text-center" href="#">Согласие на обработку персональных данных</a></div>
+            <div class="col-12 mt-16"><a class="footer-link text-center" href="#">Политика конфиденциальности</a></div>
+            <div class="col-12 mt-50">
+              <div class="par-14 footer-decs">Общий срок проведения акции с 07 ноября 2023 года по 31 января 2024 года. Срок регистрации участников в акции, срок совершения покупок и регистрации чеков: с 07 ноября 2023 года по 08 января 2024 года. Акция проводится в розничных магазинах торговой сети «Монетка», продающих продукцию ТМ «МахеевЪ» на территории РФ. Правила акции, информацию об Организаторе акции, порядке и условиях её проведения можно узнать на сайте https://www.kupi-maheev.ru/. <br>Организатор акции – ООО «Ай-Экшн».</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="modal" id="modal-enter">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h2 class="text-center c-blue">Вход</h2>
+              <form class="row needs-validation mt-24" novalidate>
+                <div class="col-12 mb-16 pos-r">
+                  <div class="form-floating">
+                    <input class="form-control mask-phone" type="text" placeholder="Номер телефона" required id="phone">
+                    <label for="phone">Номер телефона</label>
+                    <div class="invalid-feedback">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-12 mb-16 pos-r">
+                  <div class="form-floating">
+                    <input class="form-control" type="password" placeholder="Пароль" required id="password">
+                    <label for="password">Пароль</label>
+                    <div class="invalid-feedback">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-12 mb-16 mb-md-24"><a class="js-change-modal modal-link text-end w-100" href="#modal-recovery">Забыли пароль?</a></div>
+                <div class="col-12 mb-16 mb-md-24">
+                  <button class="btn btn-blue w-100 px-0" type="submit"> Войти </button>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-12"> 
+                  <p class="fs-medium text-center c-blue mb-10">Еще нет аккаунта? </p><a class="js-change-modal modal-link-lg text-center" href="#modal-reg">Зарегистрируйтесь</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-reg">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h2 class="text-center c-blue">Регистрация</h2>
+              <form class="row needs-validation mt-24" novalidate>
+                <div class="col-sm-6 mb-16 mb-md-24 pos-r">
+                  <div class="form-floating">
+                    <input class="form-control" type="text" placeholder="Фамилия" required id="fio">
+                    <label for="fio">Фамилия </label>
+                    <div class="invalid-feedback">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-sm-6 mb-16 mb-md-24 pos-r">
+                  <div class="form-floating">
+                    <input class="form-control" type="text" placeholder="Имя" required id="name">
+                    <label for="name">Имя</label>
+                    <div class="invalid-feedback">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-sm-6 mb-16 mb-md-24 pos-r">
+                  <div class="form-floating">
+                    <input class="form-control" type="date" placeholder="Дата рождения" required id="date">
+                    <label for="date">Дата рождения</label>
+                    <div class="invalid-feedback">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-sm-6 mb-16 mb-md-24 pos-r">
+                  <div class="form-floating">
+                    <input class="form-control" type="text" placeholder="Город рождения" required id="city">
+                    <label for="city">Город рождения</label>
+                    <div class="invalid-feedback">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-sm-6 mb-16 mb-md-24 pos-r">
+                  <div class="form-floating">
+                    <input class="form-control mask-phone" type="text" placeholder="Номер телефона" required id="phone">
+                    <label for="phone">Номер телефона</label>
+                    <div class="invalid-feedback">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-sm-6 mb-16 mb-md-24 pos-r">
+                  <div class="form-floating">
+                    <input class="form-control" type="email" placeholder="E-mail" required id="email">
+                    <label for="email">E-mail</label>
+                    <div class="invalid-feedback">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-12 mb-2 pos-r">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="agreement" required>
+                    <label class="form-check-label" for="agreement">Я даю <a href=""> согласие </a> на обработку моих персональных данных</label>
+                    <div class="invalid-feedback checkbox">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-12 mb-2 pos-r">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="agreement" required>
+                    <label class="form-check-label" for="agreement">Я ознакомлен и согласен с <a href=""> пользовательским соглашением </a> и <a href="">политикой конфиденциальности  </a></label>
+                    <div class="invalid-feedback checkbox">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-12 mb-2 pos-r">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="agreement" required>
+                    <label class="form-check-label" for="agreement">Я ознакомлен и согласен с <a href=""> правилами акции </a></label>
+                    <div class="invalid-feedback checkbox">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-12 mb-2 pos-r">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="agreement" required>
+                    <label class="form-check-label" for="agreement"> <a href=""> Мне уже есть 18 лет</a></label>
+                    <div class="invalid-feedback checkbox">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-12 my-24">
+                  <button class="btn btn-blue w-100 px-0" type="submit"> Зарегистрироваться </button>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-12"> 
+                  <p class="fs-medium text-center c-blue mb-10">Если вы уже регистрировались, то вам необходимо</p><a class="js-change-modal modal-link-lg text-center" href="#modal-enter">Войти</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-recovery">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h4 class="text-center c-blue">Восстановление пароля</h4>
+              <form class="row needs-validation mt-24" novalidate>
+                <div class="col-12 mb-16 mb-md-24">
+                  <div class="form-floating">
+                    <input class="form-control mask-phone" type="text" placeholder="Номер телефона" required id="phone">
+                    <label for="phone">Номер телефона</label>
+                    <div class="invalid-feedback">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-12 mb-16 mb-md-24">
+                  <button class="btn btn-blue w-100 px-0" type="submit"> Восстановить пароль</button>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-12"> </div><a class="js-change-modal modal-link-lg text-center" href="#modal-reg">Войти </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-success-reg">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h4 class="text-center c-blue">Вы зарегистрировались</h4>
+              <div class="row mt-12">
+                <div class="col-12 mt-4 mt-md-10">
+                  <p class="fs-medium text-center c-blue mb-10">На указанный вами телефон отправлен пароль для доступа в личный кабинет</p>
+                </div>
+                <div class="col-12 mt-16 mt-md-24"><a class="js-change-modal btn btn-blue w-100 px-0" href="#modal-reg"> Войти </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-fiskal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h4 class="text-center c-blue">Фискальные знаки на чеке<img class="img-fluid mt-24" src="img/fiskal.webp" alt=""/>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="error">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h4 class="text-center c-blue">Ошибка</h4>
+              <div class="row mt-12">
+                <div class="col-12 mt-4 mt-md-10">
+                  <p class="fs-medium text-center c-blue mb-10">Текст ошибки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-history">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h3 class="text-center c-blue">Новая история</h3>
+              <form class="row needs-validation mt-24" novalidate>
+                <div class="col-12 mb-16 pos-r">
+                  <div class="form-floating">
+                    <input class="form-control" type="text" placeholder="Город" required id="city">
+                    <label for="phone">Город</label>
+                    <div class="invalid-feedback">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-12 mb-16 pos-r">
+                  <div class="form-floating">
+                    <input class="form-control" type="text" placeholder="Название достопримечательности" required id="name">
+                    <label for="name">Название достопримечательности</label>
+                    <div class="invalid-feedback">Обязательное поле</div>
+                  </div>
+                </div>
+                <div class="col-sm-12 mb-24">
+                  <div class="upload-one"><input  class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл"></div>
+                </div>
+                <div class="col-12 mb-16 mb-md-24">
+                  <button class="btn btn-blue w-100 px-0" type="submit"> Отправить на модерацию</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="libs/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.ru-RU.js"></script>
+    <script src="libs/bootstrap-fileinput/js/locales/ru.js"></script>
+    <script src="libs/DataTables/datatables.min.js"></script>
+    <script src="libs/croppie/croppie.min.js"></script>
+    <script src="libs/jquery.maskedinput.min.js"></script>
+    <script src="libs/parallax/tweenmax.min.js"></script>
+    <script src="libs/parallax/jquery-parallax.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/fancybox/fancybox.js"></script>
+    <script src="libs/jquery.marquee.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+</html>

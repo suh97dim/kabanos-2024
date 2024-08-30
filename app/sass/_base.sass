@@ -1,0 +1,858 @@
+body
+	font-family: 'Montserrat'
+	text-rendering: optimizeLegibility !important
+	-webkit-font-smoothing: antialiased !important
+	-moz-osx-font-smoothing: grayscale !important
+	background-color: #FB6C1B
+	color: $blue
+
+.lk-page
+	background-image: url("../img/flying-ball.png")
+	background-repeat: no-repeat
+	background-position-x: calc(50% + 680px)
+	background-position-y: 170px
+	background-size: 307px
+.container
+	max-width: 1224px!important
+	padding-left: 15px
+	padding-right: 15px
+
+h1
+	font-size: 62px
+	font-style: normal
+	font-weight: 700
+	line-height: 122%
+	text-transform: uppercase
+h2
+
+	font-size: 52px
+	font-style: normal
+	font-weight: 700
+	line-height: 119%
+	text-transform: uppercase
+h3
+	font-size: 38px
+	font-style: normal
+	font-weight: 600
+	line-height: normal
+	letter-spacing: -0.76px
+h4
+	font-size: 28px
+	font-style: normal
+	font-weight: 700
+	line-height: 121%
+	letter-spacing: -0.56px
+h5
+	font-size: 24px
+	font-style: normal
+	font-weight: 700
+	line-height: 133%
+	text-transform: uppercase
+h6
+	font-size: 20px
+	font-style: normal
+	font-weight: 700
+	line-height: 120%
+	letter-spacing: -0.4px
+.fs-large
+	font-size: 20px
+	font-style: normal
+	font-weight: 400
+	line-height: 120%
+	letter-spacing: -0.8px
+.fs-medium
+	font-size: 15px
+	font-style: normal
+	font-weight: 400
+	line-height: 146%
+	letter-spacing: -0.3px
+.fs-small
+	font-size: 12px
+	font-style: normal
+	font-weight: 500
+	line-height: 140%
+	letter-spacing: -0.24px
+.fw-bold
+	font-weight: 700
+.fw-medium
+	font-weight: 500
+.container-fluid
+	padding: 0
+
+.story-item
+	border-radius: 16px
+	background: #FFF
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
+	display: flex
+	padding: 12px 12px 28px 12px
+	flex-direction: column
+	justify-content: flex-start
+	align-items: flex-start
+	gap: 16px
+	height: 100%
+.story-img
+	display: flex
+	justify-content: center
+	background-size: cover
+	background-position: center
+	min-height: 260px
+	position: relative
+	width: 100%
+	border-radius: 8px
+.story-details
+	padding: 0 16px
+	display: flex
+	flex-direction: column
+	gap: 4px
+	width: 100%
+	p
+		margin: 0
+
+
+.like-btn
+	padding-left: 24px
+	border: none
+	background-color: transparent
+	fill: red
+	background-image: url('../img/icons/like-ic.svg')
+	background-position: top center
+	background-repeat: no-repeat
+	background-position-x: left
+	background-position-y: center
+	background-size: 18px auto
+	font-size: 14px
+	font-style: normal
+	font-weight: 700
+	line-height: normal
+	text-transform: uppercase
+	text-decoration: none
+	color: $blue
+	&:hover
+		color: $blue
+		opacity: 0.7
+.like-btn.active
+	background-image: url('../img/icons/like-ic-fill.svg')
+.play-image
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+
+//////////// блок правила
+.rules__item
+	img
+		width: 244px
+		display: block
+		margin: 0 auto
+//////////первый экроан
+.banner
+	background-image: url('../img/bg/banner-bg.svg')
+	background-position: top center
+	background-repeat: no-repeat
+	background-size: 865px
+	padding-top: 60px
+.banner-svg
+	width: 520px
+	display: block
+	margin-top: -10px
+.banner-img
+	width: 1005px
+	display: block
+	margin-top: 20px
+.left-side-img1
+	margin-left: auto
+	margin-right: auto
+	left: 0
+	right: 0
+	position: absolute
+	width: 484px
+	transition-duration: 1.3s
+	transform: translate(-1120px, -500px)
+	opacity: 0
+
+.left-side-img1-anim
+	opacity: 1
+	transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
+	transform: translate(-620px, 110px)
+.left-side-img2
+	margin-left: auto
+	margin-right: auto
+	left: 0
+	right: 0
+	position: absolute
+	width: 307px
+	transition-duration: 1.3s
+	transform: translate(1120px, -500px)
+	opacity: 0
+.left-side-img2-anim
+	opacity: 1
+	transition-timing-function: cubic-bezier(0.2, 1.01, 0.38, 1)
+	transform: translate(650px, 150px)
+.side-img-wrapper
+	width: 100%
+	height: 1000px
+	overflow-x: hidden
+	overflow-y: clip
+	position: absolute
+	pointer-events: none
+	top: 0
+	z-index: 1
+.banner-buttons-wrapper
+	position: absolute
+	left: 0
+	margin-left: auto
+	margin-right: auto
+	right: 0
+	bottom: 260px
+	width: max-content
+
+//// главная призы
+.main-prize-mp
+
+	background-image: url('../img/bg/main-page-prize-1-bg.png')
+	background-position: center center
+	display: flex
+	flex-direction: column
+	gap: 30px
+	padding: 70px 0
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	.label
+		display: flex
+		margin: 0 auto
+		.text
+			padding: 0 78px 0 24px
+			height: 54px
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 24px
+			font-weight: 700
+			background-color: #FB6C1B
+			text-transform: uppercase
+			color: white
+			border-radius: 100px
+			width: max-content
+
+		.counter
+			width: 54px
+			height: 54px
+			margin-left: -57px
+			outline: 3px solid #FDEBE1
+			display: flex
+			justify-content: center
+			font-size: 24px
+			font-weight: 700
+			color: white
+			align-items: center
+			border-radius: 100px
+			background-color: #051338
+			.large
+				width: 99px
+	.header
+		color: #051338
+		font-size: 110px
+		font-style: normal
+		margin-top: 10px
+		font-weight: 700
+		line-height: 80px
+		letter-spacing: -5.76px
+		text-transform: uppercase
+		z-index: 1
+	h4
+		font-weight: 400
+.prize-mp
+	display: flex
+	flex-direction: row
+	gap: 15px
+	align-items: center
+	.prize-mp-desc
+		display: flex
+		flex-direction: column
+	.counter
+		width: 54px
+		height: 54px
+
+		display: flex
+		justify-content: center
+		font-size: 22px
+		font-weight: 700
+		color: white
+		align-items: center
+		border-radius: 100px
+		background-color: #051338
+	.counter.large
+		width: 99px
+.prize-mp-img-wrapper
+
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	width: max-content
+	img
+		width: 270px
+.prize-1
+	background-image: url('../img/bg/main-page-prize-2-bg.png')
+.prize-2
+	background-image: url('../img/bg/main-page-prize-3-bg.png')
+.prize-3
+	background-image: url('../img/bg/main-page-prize-4-bg.png')
+.prize-4
+	background-image: url('../img/bg/main-page-prize-5-bg.png')
+.prize-5
+	background-image: url('../img/bg/main-page-prize-6-bg.png')
+.prize-6
+	background-image: url('../img/bg/main-page-prize-7-bg.png')
+#photo, #winners
+	background-color: #051338
+
+//////// свйпер
+
+#faq
+	background: $cream
+.swiper-products
+	overflow: hidden
+.swiper-products-prev,
+.swiper-products-next
+	width: 18px
+	height: 37px
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: contain
+	top: 50%
+	position: absolute
+	transform: translateY(-50%)
+.swiper-products-next
+	background-image: url(../img/icons/right-arrow.svg)
+	right: -50px
+.swiper-products-prev
+	background-image: url(../img/icons/left-arrow.svg)
+	left: -50px
+
+.qa-wrapper
+	padding: 32px
+	border-radius: 16px
+	border: 1px solid #E4D4CB
+
+.qa-item
+	padding: 16px 0
+	border-top: 1px solid #E4D4CB
+	.qa-title
+		background-image: url(../img/icons/qa-open.svg)
+		background-repeat: no-repeat
+		background-position-x: right
+		background-position-y: 7px
+		cursor: pointer
+		padding-right: 30px
+		font-weight: 400
+		font-size: 15px
+		line-height: 120%
+		color: #071C49
+	.qa-details
+		margin-top: 16px
+		display: none
+		line-height: 130%
+		font-weight: 400
+		color: #071C49
+		font-size: 14px
+
+.qa-item:first-child
+	border: none
+.qa-item.default-active
+	.qa-details
+		display: block
+.qa-item.active
+	.qa-title
+		font-weight: 700
+		background-image: url(../img/icons/qa-close.svg)
+.show-more
+	font-size: 18px
+	color: #092562
+	font-weight: 600
+	margin-top: 16px
+	display: block
+	width: max-content
+.contact-form
+	padding: 40px
+	border-radius: 16px
+	background-color: #FB6C1B
+
+//winners
+.winners-search__btn
+	position: absolute
+	right: 24px
+	top: 0
+	bottom: 0
+	margin: auto 0
+	width: 20px
+	height: 20px
+	border-radius: 0
+	border: 0
+	background: 0 0
+	background-image: url(../img/icons/search.svg)
+	background-repeat: no-repeat
+	background-position: center
+
+input#search
+	height: 54px
+	width: 100%
+	outline: 1px solid #373E5A
+	background: transparent
+	border-radius: 8px
+	border: 0
+	padding: 0 30px 0 24px
+	font-weight: 400
+	font-size: 15px
+	color: #767D92
+	line-height: 100%
+
+input#search:focus
+	color: #fff6d8
+	outline: 1px solid #68697C
+
+input#search::-webkit-input-placeholder
+	color: #767D92
+
+input#search::-moz-placeholder
+	color: #767D92
+
+.winners-search
+	position: relative
+	width: 450px
+
+#tableWinners_filter
+	display: none
+#tableWinners
+	width: 100%
+	thead
+		background-color: #FDEBE1
+	th
+		padding: 15px 10px 15px 25px
+		font-size: 15px
+		font-weight: 700
+		color: #051338
+	td
+		padding: 15px 10px 15px 25px
+		font-size: 15px
+		font-weight: 400
+		color: $white
+
+	tr:nth-child(2n)
+		background-color: #061846
+
+	th:nth-child(1)
+		border-radius: 8px 0px 0px 8px
+
+	th:nth-last-child(1)
+		border-radius: 0px 8px 8px 0px
+.history-main-pagination
+	gap: 14px
+#tableWinners_wrapper, .history-main-pagination
+	.list-group-item::before,a.page-link
+		font-size: 20px
+		display: flex
+		justify-content: center
+		align-items: center
+	a.page-link:hover
+		color: #fff!important
+
+	ul.pagination
+		display: flex
+		gap: 14px
+		margin-top: 30px
+
+	a.page-link
+		display: flex
+		width: 48px
+		height: 48px
+		padding: 13px 15px 14px
+		justify-content: center
+		align-items: center
+		border-radius: 48px!important
+		background: #061846!important
+		color: #fff!important
+		border: 0
+		font-size: 16px
+	.page-item.active .page-link
+		color: #fff!important
+		background-color: #FF8925!important
+#Central, #Volga, #Urals, #Siberian, #FarEastern, #Northwestern, #South, #Central, #Kavkaz
+	&:hover
+		opacity: 0.5
+.map-wrapper
+	width: 100%
+	svg
+		width: 100%
+		height: auto
+.photo-in-reg
+	fill: #22366A
+	outline: none
+	box-shadow: none
+	border: none
+.active-reg
+	fill: #E25404
+	outline: none
+	box-shadow: none
+	border: none
+.marquee-wrap
+	display: flex
+	gap: 24px
+
+.marquee-img
+	width: 288px
+	border-radius: 16px
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
+.line
+	width: 100%
+	height: 1px
+.touch-center
+	margin: 0 auto
+
+.status_wait
+	background-image: url(../img/icons/wait.svg)
+.status_canceled
+	background-image: url(../img/icons/lose.svg)
+.status_success
+	background-image: url(../img/icons/win.svg)
+.status
+	background-size: 16px
+	font-weight: 400
+	font-size: 15px
+	background-repeat: no-repeat
+	padding-left: 24px
+	background-position: 0 4px
+	padding: 0 0 0 24px
+	color: $blue
+ol
+	list-style-type: none
+	counter-reset: num
+	margin: 0 0 0 60px
+	padding: 15px 0 5px 0
+	font-size: 16px
+
+ol li 
+	position: relative
+	margin: 0px 0 28px 0
+	// padding: 0px 0 25px 0
+	font-weight: 400
+	line-height: 120%
+	font-size: 20px
+	text-transform: none
+
+ol li:before 
+	content: counter(num)
+	counter-increment: num
+	display: inline-block
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	left: -60px
+	width: 46px
+	height: 46px
+	display: flex
+	align-items: center
+	justify-content: center
+	color: white
+	border: 1px solid #fff
+	border-radius: 100px
+	text-align: center
+	font-size: 20px
+	font-weight: 400
+.swiper-pagination
+	position: absolute
+
+	bottom: -10px!important
+	left: 0
+	width: 100%
+	text-align: center
+
+	&-bullet
+		width: 8px
+		height: 8px
+		border-radius: 100%
+		display: inline-block
+		background: #fff
+		margin: 0 5px
+		cursor: pointer
+
+		&-bullet-active
+			background: #007aff
+
+@media screen and (max-width: 1100px)
+	.lk-page
+		background-image: none
+	h1
+		font-size: 50px
+	.story-img
+		min-height: 30vw
+	.prize-mp
+
+		flex-direction: column
+		.prize-mp-desc
+			align-items: center
+		h5
+			text-align: center
+
+	#tableWinners
+		min-width: 900px
+		th
+			padding: 15px 10px 15px 20px
+		td
+			padding: 15px 10px 15px 20px
+	// #tableWinners_wrapper
+	.dt-row
+		overflow-x: scroll
+
+	.left-side-img1
+		width: 40vw
+		transform: translate(-100vw, -500px)
+		opacity: 1
+
+	.left-side-img1-anim
+		opacity: 1
+		transform: translate(-47vw, 24vw)
+	////
+	.left-side-img2
+		width: 24vw
+		transform: translate(100vw, -500px)
+		opacity: 1
+	.left-side-img2-anim
+		opacity: 1
+
+		transform: translate(43vw, 27vw) rotate(-30deg)
+	.banner
+		background-size: 100%
+		padding-top: 60px
+		h1
+			font-size: 6vw
+	.banner-svg
+		width: 50vw
+	.banner-img
+		width: 100%
+	.marquee-wrap
+		gap: 12px
+	.marquee-img
+		width: 200px
+		border-radius: 8px
+@media screen and (max-width: 768px)
+	#Central, #Volga, #Urals, #Siberian, #FarEastern, #Northwestern, #South, #Central, #Kavkaz
+		&:hover
+			opacity: 1
+	.map-wrapper
+		width: 100%
+		overflow: scroll
+		padding: 20px 0
+		svg
+			width: 800px
+			height: auto
+	ol
+		list-style-type: none
+		counter-reset: num
+		margin: 0 0 0 60px
+		padding: 15px 0 5px 0
+		font-size: 16px
+
+	ol li 
+		position: relative
+		margin: 0px 0 25px 0
+		// padding: 15px 0 15px 0
+		font-weight: 400
+		line-height: 120%
+		font-size: 16px
+		text-transform: none
+
+	ol li:before 
+		content: counter(num)
+		counter-increment: num
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: -60px
+		width: 40px
+		height: 40px
+
+		font-size: 16px
+	#tableWinners_wrapper, .history-pagination, .history-main-pagination, #tableApplications_wrapper,  #tableCheck_wrapper
+
+		ul.pagination
+			justify-content: center
+		a.page-link
+			width: 36px
+			height: 36px
+			font-size: 14px
+	.story-img
+		min-height: 32vw
+	#tableWinners
+		th
+			font-size: 14px
+		td
+			font-size: 14px
+	.marquee-img
+		width: 180px
+	.banner-buttons-wrapper
+		position: relative
+		bottom: unset
+		width: 100%
+		.btn
+			width: 90%
+			margin: 0 auto
+	.qa-wrapper
+		padding: 24px
+
+	.left-side-img1-anim
+		transform: translate(-49vw, 30vw)
+
+	.left-side-img2-anim
+
+		transform: translate(43vw, 36vw) rotate(-30deg)
+	h2
+		font-size: 36px
+	h3
+		font-size: 30px
+	.prize-mp-img-wrapper
+		img
+			width: 220px
+	.prize-mp
+		.counter
+			width: 40px
+			height: 40px
+			font-size: 16px
+		.counter.large
+			width: 70px
+
+	.main-prize-mp
+		.label
+			display: flex
+			margin: 0 auto
+			.text
+				padding: 0 56px 0 18px
+				height: 40px
+				font-size: 18px
+			.counter
+				width: 40px
+				height: 40px
+				margin-left: -40px
+				outline: 2px solid #FDEBE1
+				font-size: 18px
+
+		.header
+
+			font-size: 80px
+			line-height: 50px
+	h4
+		font-size: 22px
+	h5
+		font-size: 18px
+	.contact-form
+		padding: 30px
+	.show-more
+		font-size: 16px
+	.rules_br
+		display: none
+	.prize_br
+		display: none
+	.rules__item
+		img
+			width: 160px
+@media screen and (max-width: 575px)
+	.story-img
+		min-height: 65vw
+	.prize-mp
+		flex-direction: column
+		align-items: center
+		gap: 5px
+		.prize-mp-img-wrapper
+
+			img
+				width: 240px
+		.prize-mp-desc
+
+			align-items: center
+			h5
+				text-align: center
+
+	.marquee-img
+		width: 160px
+	.winners-search
+
+		width: 100%
+	.qa-wrapper
+		padding: 20px
+	.fs-large
+		font-size: 16px
+
+	h1
+		font-size: 34px
+	h2
+		font-size: 30px
+	h3
+		font-size: 24px
+	h5
+		font-size: 18px
+	h6
+		font-size: 16px
+	.rules__item
+		img
+			width: 140px
+		p
+			font-size: 13px
+	.banner
+		background-size: 100%
+		padding-top: 30px
+		background-image: url('../img/bg/banner-bg.svg')
+		h1
+			font-size: 7vw
+	.banner-svg
+		width: 55vw
+	.banner-img
+		width: 100%
+	.prize-mp
+		.counter
+			font-size: 14px
+	.main-prize-mp
+		padding: 60px 0 89px 0
+		gap: 20px
+		.label
+			display: flex
+			margin: 0 auto
+			.text
+				padding: 0 54px 0 16px
+				height: 40px
+				font-size: 14px
+			.counter
+				width: 40px
+				height: 40px
+				margin-left: -40px
+				outline: 2px solid #FDEBE1
+				font-size: 14px
+
+		.header
+
+			font-size: 65px
+			line-height: 52px
+		h4
+			font-size: 20px
+		.contact-form
+			padding: 20px
+	.left-side-img1-anim
+		transform: translate(-50vw, 40vw)
+
+	.left-side-img2-anim
+
+		transform: translate(44vw, 46vw) rotate(-30deg)
+@media screen and (max-width: 350px)
+	.main-prize-mp
+		gap: 20px
+		.header
+
+			font-size: 50px
+			line-height: 52px
+		h4
+			font-size: 18px
+	.left-side-img1-anim
+		transform: translate(-50vw, 45vw)
+
+	.left-side-img2-anim
+
+		transform: translate(44vw, 52vw) rotate(-30deg)
+	h5
+		font-size: 16px

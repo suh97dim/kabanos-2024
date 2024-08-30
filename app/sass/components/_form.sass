@@ -1,0 +1,403 @@
+.file-upload
+    height: 368px
+    min-height: 100%
+    .file-preview-thumbnails,
+
+    .kv-preview-thumb,
+    .kv-file-content,
+    .file-preview,
+    .file-input
+        height: 100%
+    .file-drop-zone
+        width: 100%
+        height: 100%
+        max-width: 100%
+        border-radius: 16px
+        cursor: pointer
+        background: #fff url('../img/icons/icon_upload_large.svg') no-repeat center / 238px auto
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
+    .file-preview:hover .file-drop-zone
+        background-color: #fff
+    .file-input:not(.file-input-ajax-new) .file-drop-zone
+        padding-bottom: 0
+        background-position: center bottom
+        background-image: none
+    .kv-file-zoom,
+    .kv-file-upload,
+    .file-thumb-progress.kv-hidden,
+    .file-footer-caption,
+    .fileinput-remove
+        display: none !important
+    .file-drop-zone-title
+        font-size: 0
+    .box-file
+        display: none
+    .kv-preview-thumb
+        width: 100%
+        text-align: center
+        position: relative
+    .close
+        display: none
+    .kv-file-remove
+        position: absolute
+        right: 5px
+        top: 5px
+        font-size: 0
+        width: 25px
+        height: 25px
+        border: 0 !important
+        background: #ffc400 url(../img/icons/delete-file.svg) no-repeat center / 25px 25px !important
+        padding: 0 !important
+
+        cursor: pointer
+        &:hover,
+        &:focus
+            opacity: .7
+        span
+            display: none
+    .file-preview-thumbnails
+        display: flex
+        flex-wrap: wrap
+        align-items: start
+    &--small
+        .file-drop-zone
+            height: 60px !important
+            background: #FFF6D8 url('../img/icons/icon_upload_small.svg') no-repeat center / 238px auto
+            background-size: 147px auto
+    .file-error-message
+        color: red
+    .kv-file-rotate
+        display: none
+    .file-preview-status
+        display: none
+
+.form-control
+    font-size: 15px
+
+    line-height: 130%
+    letter-spacing: -0.32px
+    // padding: 25px 20px 9px 20px
+    border-radius: 8px
+    font-weight: 400
+    border: 2px solid white
+    background: $white
+    width: 100%
+    color: #565B67
+    &:focus
+        border: 2px solid $ligth-orange
+        outline: none
+        box-shadow: none
+        // line-height: 0
+        color: $blue
+        &::-webkit-input-placeholder
+            color: transparent
+        &::-moz-placeholder
+            color: transparent
+        &:-moz-placeholder
+            color: transparent
+        &:-ms-input-placeholder
+            color: transparent
+    &:disabled
+        
+        background: $white
+.form-label
+    left: 16px
+    top: 50%
+    line-height: 1
+    color: #A39C8F
+    transition: .3s
+    padding-left: 18px
+    position: absolute
+    pointer-events: none
+    transform: translateY(-50%)
+    background-color: transparent !important
+.form-control:focus + .form-label
+    top: 18px
+    font-size: 12px
+.form-control:not(:placeholder-shown) + .form-label
+    top: 18px
+    font-size: 12px
+.form-control:not(:placeholder-shown)
+    color: $blue
+
+.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid
+    background-image: none
+
+.was-validated .form-control:invalid
+    background-image: none
+    border: 2px solid $red
+    &:focus
+        border: 2px solid $ligth-orange
+        box-shadow: none
+
+.was-validated .form-control:valid
+    background-image: none
+    border: 2px solid white
+    &:focus
+        border: 2px solid $ligth-orange
+        box-shadow: none
+
+.invalid-feedback
+    font-size: 10px
+    font-weight: 500
+    color: $red
+    font-weight: 600
+    top: 50%
+    right: 10px
+    background-color: #FFE7E7
+    position: absolute
+    transform: translateY(-50%)
+    background: white
+    padding: 5px
+    border-radius: 4px
+    width: max-content
+    margin: 0
+.text-label
+    color: #819587
+    font-size: 16px
+    font-weight: 600
+    line-height: 130%
+    letter-spacing: -0.32px
+.radio-input
+    -webkit-appearance: none
+    width: 20px
+    height: 20px
+    border: none
+    border-radius: 10px
+
+    margin-right: 8px
+    background: $white
+    min-width: 20px
+    &:checked
+        background-image: url('../img/icons/radio-check.svg')
+        background-size: cover
+        border: none
+        background-color: transparent
+    &:disabled + .label
+        opacity: 0.7
+        background: red
+.radio-label
+    color: $blue
+    font-size: 15px
+    font-weight: 400
+    line-height: 130%
+    letter-spacing: -0.32px
+    display: flex
+    justify-content: center
+    align-items: center
+.radio-wrap
+    display: flex
+    gap: 18px
+    align-items: center
+    margin-top: 18px
+    flex-wrap: wrap
+
+.text-label
+    font-size: 15px
+    font-weight: 400
+    color: $blue
+label.checkbox
+    max-width: 100%
+    display: flex
+    margin-top: 2px
+    margin-bottom: 9px
+    flex-wrap: wrap
+.contact-form
+    textarea
+        min-height: 140px
+    .invalid-feedback.checkbox
+        position: relative
+        background: red
+        transform: none
+        top: unset
+        right: unset
+        background-color: transparent
+        padding: 0
+        color: $white
+        margin-top: 10px
+    input[type="checkbox"]:checked + .form-check-label
+        color: #FDAE82
+    input[type="checkbox"]:invalid + .form-check-label
+        color: #FDAE82
+    label.form-check-label
+        font-size: 12px
+        color: #FDAE82
+
+        a
+            color: $white
+            text-decoration: none
+            &:hover
+                opacity: 0.7
+                color: $white
+
+    input[type="checkbox"]
+        -webkit-appearance: none
+        color: #FDAE82
+        &:checked
+            background-image: url('../img/icons/contact-form-check.svg')
+            background-size: cover
+            border: none
+.modal
+    input[type="checkbox"]:checked + .form-check-label
+        color: #A18779 !important
+    input[type="checkbox"]:invalid + .form-check-label
+        color: #A18779 !important
+    label.form-check-label
+        font-size: 15px
+        color: #A18779
+
+        a
+            color: #071C49
+
+            &:hover
+                color: #071C49
+                text-decoration: none
+
+    input[type="checkbox"]
+        -webkit-appearance: none
+        color: #FDAE82
+
+        &:checked
+            background-image: url('../img/icons/form-check.svg')!important
+            background-size: cover
+            border: none
+    .invalid-feedback.checkbox
+        position: relative
+        background: red
+        transform: none
+        top: unset
+        right: unset
+        background-color: transparent
+        padding: 0
+        color: red
+        margin-top: 4px
+.form-floating>label
+    font-size: 15px
+    color: #565B67
+    padding-left: 20px
+.form-floating>.form-control
+    padding-left: 17px
+
+//загрузка файла
+.file-subtitle
+    font-size: 15px
+    font-weight: 400
+.upload-one
+    .form-control
+        outline: none
+
+    .file-input
+        border-radius: 10px
+        border-radius: 10px
+        padding: 1px
+        border: 2px dashed #E1C1AF
+        background-repeat: no-repeat
+        &:focus,
+        &:hover
+            border-color: $orange
+            // background-color: #E58F47
+        &:not(.file-input-new)
+            .file-caption
+                padding-right: 0
+            .file-caption-name
+                width: 100%
+                padding-right: 40px
+            .btn-file
+                display: none
+            .file-caption
+                &::before
+                    content: none
+    .fileinput-remove
+        font-size: 0
+        width: 40px
+        padding: 0
+        height: 100%
+        top: 50%
+        right: 0
+        transform: translate(0,-50%)
+        position: absolute
+        background: transparent url('../img/icons/delete-file.svg') no-repeat center / 22px auto !important
+        border: none
+        cursor: pointer
+        z-index: 5
+    .file-input-new
+        .fileinput-remove
+            display: none !important
+    .file-caption
+        display: flex
+        color: $white
+        align-items: center
+        justify-content: center
+        border: none !important
+        box-shadow: none !important
+        &.form-control
+            background: none !important
+        &::before
+            content: ''
+            width: 20px
+            height: 20px
+            position: absolute
+            display: inline-block
+            transform: translate(-400%, 1%)
+            background: url('../img/icons/upload-file.svg') no-repeat center / 20px
+    .file-caption-name
+        width: 140px
+        margin-left: 5px
+        min-height: 52px
+        border: none !important
+        background: none !important
+        text-align: center
+        transform: translateY(1px)
+        color: $blue
+        font-size: 15px
+        font-weight: 400
+        letter-spacing: -0.64px
+        &::placeholder
+            color: $blue
+            font-weight: 500
+    .fileinput-cancel,
+    .fileinput-upload-button
+        display: none
+    .btn-file
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        font-size: 0
+        position: absolute
+        padding-left: 15px
+        padding-right: 15px
+        box-shadow: none !important
+        border: none !important
+        z-index: 10 !important
+        background: transparent !important
+        &:hover,
+        &:focus,
+        &:active
+            background: transparent !important
+    .file
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        width: 100%
+        z-index: 10 !important
+        cursor: pointer
+        opacity: 0
+        color: $blue !important
+        background: none !important
+        background-color: transparent
+
+        &::placeholder
+            opacity: 0 !important
+    .fileinput-cancel,
+    .fileinput-upload
+        display: none
+
+@media screen and (max-width: 768px)
+    .file-upload
+        height: 290px
+        .file-drop-zone
+            background: #fff url('../img/icons/icon_upload_large.svg') no-repeat center / 200px auto
+@media screen and (max-width: 556px)

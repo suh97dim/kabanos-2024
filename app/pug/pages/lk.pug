@@ -1,0 +1,56 @@
+extends /layout/page
+
+block title
+    title Личный кабинет
+
+block variables
+    - var page = 'lk'
+
+block content
+    .container.mt-40
+        .row
+            .col-12 
+                h1.text-center.c-blue Личный кабинет
+            .col-12.mt-12.mt-md-24 
+                .coming-dates
+                    .coming-dates__title Ближайшие розыгрыши
+                    //- p.fs-medium.c-white Ближайшие розыгрыши
+                    .dates-list
+                        .dates-list__item
+                            .dates-list__title Еженедельный
+                            .dates-list__desc 12.09.2024
+                        .dates-list__item
+                            .dates-list__title Ежемесячный
+                            .dates-list__desc 12.09.2024
+                        .dates-list__item
+                            .dates-list__title Главный
+                            .dates-list__desc 27.09.2024
+
+
+        .tab-wrapper.mt-12.mt-md-24
+            ul.nav.nav-lk.row.no-gutters
+                li.nav-lk-item.col-4.col-sm
+                    a(href='#tab-1' data-bs-toggle="tab").nav-lk-link.active Чеки
+                li.nav-lk-item.col-4.col-sm
+                    a(href='#tab-2' data-bs-toggle="tab").nav-lk-link Истории
+                li.nav-lk-item.col-4.col-sm
+                    a(href='#tab-3' data-bs-toggle="tab").nav-lk-link Заявки
+                li.nav-lk-item.col-4.col-sm.mt-12.mt-sm-0 
+                    a(href='#tab-4' data-bs-toggle="tab").nav-lk-link Призы
+                li.nav-lk-item.col-4.col-sm.mt-12.mt-sm-0 
+                    a(href='#tab-5' data-bs-toggle="tab").nav-lk-link Данные
+
+            .row
+                .tab-content
+                    #tab-1.tab-pane.fade.active.show
+                        include /modules/lk-tab-1
+                    #tab-2.tab-pane.fade
+                        include /modules/lk-tab-2
+                    #tab-3.tab-pane.fade
+                        include /modules/lk-tab-3
+                    #tab-4.tab-pane.fade
+                        include /modules/lk-tab-4
+                    #tab-5.tab-pane.fade
+                        include /modules/lk-tab-5
+
+

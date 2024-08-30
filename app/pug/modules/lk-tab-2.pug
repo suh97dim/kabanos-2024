@@ -1,0 +1,79 @@
+.lk-content  
+    #noHistory.row
+        .col-12.mt-32.mt-md-60.mt-lg-80 
+            h3.text-center.c-blue Мои истории
+        .col-12.my-25.my-md-50
+            +img("icons/photo-not-upload.svg",'','mx-a d-block','40')
+            p.fs-large.c-blue.text-center.mt-24 Здесь будут ваши фото, участвующие в конкурсе
+        .col-12
+            //добавить мобильное окно
+            a.btn.btn-blue.mx-a.js-change-modal(href="#modal-history") Добавить историю
+        .col-12.aling-items.center.mt-20.mt-md-32.text-center
+            a(href="/photo-contest.html").link-orange.mx-a
+                span
+                    +img("icons/photo-small.svg",'',' mr-10','') 
+                    |Посмотреть работы других участников  
+    #isHistory.row 
+        .col-12.mt-20.mt-md-32
+            .lk-info-block
+                +img("icons/you-win-label-icon.svg",'','mr-12 d-block','20')
+                p.fs-large.c-white Ваше место в конкурсе: 1 место
+        .col-12.mt-32.mt-md-60.mt-lg-80 
+            h3.text-center.c-blue Мои истории
+        .col-sm-6.col-lg-4.mt-12.mt-sm-24
+            .story-item 
+                .story-img(style="background-image:url('img/image.jpg')")
+                    a(href="img/image.jpg" data-fancybox="image").play-image 
+                .story-details 
+                    p.fs-medium.c-blue Махачкала
+                    p.fs-medium.c-blue.fw-bold Цитадель Нарын-Кала
+                    .status.status_wait На проверке
+                    button.btn.btn-red-text.w-100.mt-16 удалить
+        .col-sm-6.col-lg-4.mt-12.mt-sm-24
+            .story-item 
+                .story-img(style="background-image:url('img/image.jpg')")
+                    a(href="img/image.jpg" data-fancybox="image").play-image 
+                .story-details 
+                    p.fs-medium.c-blue Махачкала
+                    p.fs-medium.c-blue.fw-bold Цитадель Нарын-Кала
+                    .status.status_canceled Отклонено
+
+        .col-sm-6.col-lg-4.mt-12.mt-sm-24
+            .story-item 
+                .story-img(style="background-image:url('img/image.jpg')")
+                    a(href="img/image.jpg" data-fancybox="image").play-image 
+                .story-details 
+                    p.fs-medium.c-blue Махачкала
+                    p.fs-medium.c-blue.fw-bold Цитадель Нарын-Кала
+                    .status.status_success Подтвержден
+                    button.btn.btn-blue-text.w-100.mt-16 удалить
+        .col-12.mt-32
+            //добавить мобильное окно
+            a.btn.btn-blue.mx-a.js-change-modal(href="#modal-history") Добавить историю
+        .col-12.aling-items.center.mt-20.mt-md-32.text-center
+            a(href="/photo-contest.html").link-orange.mx-a
+                span
+                    +img("icons/photo-small.svg",'',' mr-10','') 
+                    |Посмотреть работы других участников  
+
+.cream-bg-content.mt-12.mt-md-24
+    .row 
+        .col-12.mt-20.mt-lg-0 
+            h3.c-blue.text-center Референсы для вдохновения
+    .row.mt-20.mt-md-40
+        .col-12.col-lg-5
+            +img("photo-contest-cover.png",'','img-fluid pr-0 pr-lg-40','')
+
+        .col-12.col-lg-7.mt-24.mt-lg-0
+            h6.c-blue Допустимый формат:
+                ul.mt-16.c-blue 
+                    li.li-lk На фото в творческой работе должна присутствовать Акционная продукция;
+                    li.li-lk Фото должно быть сделано на фоне достопримечательности на территории Российской Федерации;
+                    li.li-lk Работа должна содержать текстовый комментарий с упоминанием названия достопримечательности, на фоне которой сделано фото;
+                    li.li-lk Один Участник может загрузить не более 5 творческих работ за весь период Акции;
+                    li.li-lk Редактирование загруженной творческой работы невозможно;
+                    li.li-lk Творческая работа должна соответствать требованиям морали и нравственности, а также законодательства РФ;
+                    li.li-lk В творческой работе не допускается наличие изображений лиц людей, алкогольной и/или табачной продукции, наркотических или психотропных веществ, а также пропаганды их употребления (распространения).
+                    li.li-lk Подробные требования и ограничения описаны в Правилах Акции
+
+

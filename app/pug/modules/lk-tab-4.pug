@@ -1,0 +1,88 @@
+
+.lk-content
+    /////////////// Секция, когда призов нет
+    #noWinPize.row
+        .col-12.mt-32.mt-md-64  
+            h3.text-center.c-blue Призы
+        .col-12.my-25.my-md-50
+            +img("icons/prize.svg",'','mx-a d-block','40')
+            p.fs-large.c-blue.text-center.mt-24 Вы не выиграли еще ни одного приза
+    /////////////// Секция, когда есть приз
+    #winPize.row
+        .col-12.mt-20.mt-md-32
+            .lk-info-block
+                +img("icons/you-win-label-icon.svg",'','mr-12 d-block','20')
+                p.fs-large.c-white Вы выиграли приз. Вам необходимо заполнить данные 
+        .col-12.mt-32.mt-md-64 
+            h3.text-center.c-blue Гарантированный приз
+        .col-12.col-md-6.mt-15.mt-md-24
+            .lk-prize
+                .lk-prize-img
+                    +img("/lk-prizes/prize-1.jpg",'')
+                .prize-desc
+                    span 
+                        p.fs-small.c-blue за регистрацию первого чека
+                        h6.c-blue.mt-10   100 рублей на мобильный телефон 
+                    p.fs-small.c-blue.opacity-50  Может стать твоим!
+        .col-12.mt-32.mt-md-50  
+            h3.text-center.c-blue Еженедельные
+        .col-12.col-md-6.mt-15.mt-md-24
+            .lk-prize
+                .lk-prize-img
+                    +img("/lk-prizes/prize-2.jpg",'')
+                .prize-desc
+                    h6.c-blue.mt-10 Сертификат OZON номиналом 3 000 ₽  
+                    a(href="").fs-medium.c-ligth-orange 
+                        +img("icons/download-sertificate.svg",'','mr-12 d-block','20')
+                        | Скачать
+        .col-12.col-md-6.mt-15.mt-md-24
+            .lk-prize
+                .lk-prize-img
+                    +img("/lk-prizes/prize-3.jpg",'')
+                .prize-desc
+                    h6.c-blue.mt-10 Фирменный чехол на чемодан  
+                    a(type="button" ).fs-medium.c-ligth-orange.to-data-tab  
+                        +img("icons/edit-adress.svg",'','mr-12 d-block','20')
+                        | Указать адрес доставки
+        .col-12.mt-32.mt-md-50 
+            h3.text-center.c-blue Ежемесячные
+        .col-12.col-md-6.mt-15.mt-md-24
+            .lk-prize
+                .lk-prize-img
+                    +img("/lk-prizes/prize-4.jpg",'')
+                .prize-desc
+                    h6.c-blue.mt-10  Месячный набор колбасок KABANOS c термосумкой
+                    a(type="button" ).fs-medium.c-ligth-orange.to-data-tab  
+                        +img("icons/edit-adress.svg",'','mr-12 d-block','20')
+                        | Указать адрес доставки
+        .col-12.mt-32.mt-md-50 
+            h3.text-center.c-blue Приз за фотоконкурс
+        .col-12.col-md-6.mt-15.mt-md-24
+            .lk-prize
+                .lk-prize-img
+                    +img("/lk-prizes/prize-5.jpg",'')
+                .prize-desc
+                    h6.c-blue.mt-10  Беспроводные наушники Marshall Major
+                    a(type="button" ).fs-medium.c-ligth-orange.to-data-tab  
+                        +img("icons/edit-adress.svg",'','mr-12 d-block','20')
+                        | Указать адрес доставки
+        .col-12.col-md-6.mt-15.mt-md-24
+            .lk-prize
+                .lk-prize-img
+                    +img("/lk-prizes/prize-4.jpg",'')
+                .prize-desc
+                    h6.c-blue.mt-10  Месячный набор колбасок KABANOS c термосумкой
+                    a(type="button" ).fs-medium.c-ligth-orange.to-data-tab  
+                        +img("icons/edit-adress.svg",'','mr-12 d-block','20')
+                        | Указать адрес доставки
+        .col-12.mt-32.mt-md-50 
+            h3.text-center.c-blue Главный приз
+        .col-12.mt-15.mt-md-24
+            .superprize
+                +img("bg/main-prize-bg-1.jpg",'','img-left','')
+                +img("bg/main-prize-bg-2.jpg",'','img-right','')
+                .header.text-center 200 000 ₽
+                h6.c-blue.mt-10.text-center   На путешествие по России
+                a(type="button" ).fs-medium.c-ligth-orange.to-data-tab 
+                    +img("icons/edit-adress.svg",'','mr-12 d-block','20')
+                    | Заполните данные

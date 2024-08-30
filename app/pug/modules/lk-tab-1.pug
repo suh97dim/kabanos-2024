@@ -1,0 +1,215 @@
+.lk-content    
+    form#formChequeReg.row.needs-validation(novalidate) 
+        .col-12
+            .row.lk-step-1
+                .col-12.mt-20.mt-md-32
+                    .lk-step 
+                        .lk-step-box Шаг 1. Загрузите фото
+                    h3.text-center.c-blue.mt-20.mt-md-32 Зарегистрировать чек
+                .col-12.mt-20.mt-md-32
+                    ul.nav.nav-lk-regChek.justify-content-center
+                        li.nav-lk-item
+                            a(href='#upload-photo' data-bs-toggle="tab").nav-lk-regChek-link.active Фото
+                        li.nav-lk-item
+                            a(href='#camera' data-bs-toggle="tab").nav-lk-regChek-link Камера
+                .col-12.mt-20.mt-md-32
+                    .tab-content
+                        #upload-photo.tab-pane.fade.active.show 
+                            .row
+                                .col-12.col-lg-6
+                                    .file-upload
+                                        input.bootstrap-file-upload(type="file" data-browse-on-zone-click="true")
+                                .col-12.col-lg-6.mt-24.mt-xl-0
+                                    h6.c-blue  К регистрации в Акции принимаются чеки, если:
+                                    ul.mt-16.c-blue 
+                                        li.li-lk фото чека качественное,
+                                        li.li-lk чек сфотографирован полностью,
+                                        li.li-lk все символы четко видны,
+                                        li.li-lk на фото виден QR-код на кассовомчеке, он читаемый,
+                                        li.li-lk на кассовом чеке отображается наименование Акционной продукции.
+                                    .fs-medium.c-blue К регистрации <span style="font-weight:700" class="c-red ">не принимаются </span> чеки из магазинов, в которых ИНН магазина соответствует 7736207543 (ООО «ЯНДЕКС»), или 9701048328 (ООО «МАРКЕТПЛЕЙС»), или 9705118142 (ООО «Инстамарт Сервис»)
+                                .col-12.mt-24.mt-md-40   
+                                    //переход к шагу 2
+                                    button.btn.btn-blue.mx-a Далее
+
+                        #camera.tab-pane.fade 
+                            .row
+                                .col-12.col-lg-6
+                                    // загрузка с камеры
+                                    .camera-wrapper 
+                                .col-12.col-lg-6.mt-24.mt-xl-0
+                                    h6.c-blue  К регистрации в Акции принимаются чеки, если:
+                                    ul.mt-16.c-blue 
+                                        li.li-lk фото чека качественное,
+                                        li.li-lk чек сфотографирован полностью,
+                                        li.li-lk все символы четко видны,
+                                        li.li-lk на фото виден QR-код на кассовомчеке, он читаемый,
+                                        li.li-lk на кассовом чеке отображается наименование Акционной продукции.
+                                    .fs-medium.c-blue К регистрации <span style="font-weight:700" class="c-red ">не принимаются </span> чеки из магазинов, в которых ИНН магазина соответствует 7736207543 (ООО «ЯНДЕКС»), или 9701048328 (ООО «МАРКЕТПЛЕЙС»), или 9705118142 (ООО «Инстамарт Сервис»)
+            .row.lk-step-2
+                .col-12.mt-30.mt-md-50
+                    .lk-step 
+                        .lk-step-box ШАГ 2.Внесение данных чека
+                    .col-12.col-lg-9.mx-a 
+                        p.fs-medium.c-blue.text-center.mt-20 В режиме «Фото» увеличьте изображение QR-кода для автоматического распознавания параметров чека. Или в режиме «Камера» наведите на область QR-кода для автоматического распознавания параметров чека
+                .camera-wrapper.text-center.mt-20 логика ресайза
+                .col-12.mt-32.mt-md-60.mt-lg-80 
+                    h3.text-center.c-blue Ручной ввод
+                    p.fs-medium.c-blue.text-center.mt-16 Если QR-код не распознается и фискальные признаки не считываются автоматически, то введите данные вручную
+                    a.fiskal-link.mx-a.mt-16(href="#modal-fiskal").js-change-modal Где найти фискальные данные на чеке?
+                .col-12
+                    .row.mt-16.mt-md-32
+                        .col-md-6.col-lg-4.mb-16.mb-md-24.pos-r    
+                            .form-floating
+                                input(type="text" placeholder="№ФН" required  id="fn" ).form-control
+                                label(for="fn") №ФН
+                                .invalid-feedback Обязательное поле
+                        .col-md-6.col-lg-4.mb-16.mb-md-24.pos-r    
+                            .form-floating
+                                input(type="text" placeholder="№ ФД" required  id="fd" ).form-control
+                                label(for="fd") № ФД
+                                .invalid-feedback Обязательное поле
+                        .col-md-6.col-lg-4.mb-16.mb-md-24.pos-r    
+                            .form-floating
+                                input(type="text" placeholder="№ ФПД" required  id="fpd" ).form-control
+                                label(for="fpd") № ФПД
+                                .invalid-feedback Обязательное поле
+                        .col-md-6.col-lg-4.mb-16.mb-md-24.pos-r    
+                            .form-floating
+                                input(type="text" placeholder="Сумма покупки" required  id="sum" ).form-control
+                                label(for="sum") Сумма покупки
+                                .invalid-feedback Обязательное поле
+                        .col-md-6.col-lg-4.mb-16.mb-md-24.pos-r    
+                            .form-floating
+                                input(type="date" placeholder="Дата покупки" required  id="date" ).form-control
+                                label(for="date") Дата покупки
+                                .invalid-feedback Обязательное поле
+                        .col-md-6.col-lg-4.mb-16.mb-md-24.pos-r    
+                            .form-floating
+                                input(type="time" placeholder="Время покупки" required  id="time" ).form-control
+                                label(for="time") Время покупки
+                                .invalid-feedback Обязательное поле
+                        .col.mt-10.pos-r
+                            button.btn.btn-blue.mx-a(type="submit") Отправить
+.cream-bg-content.mt-12.mt-md-24
+    #noCheck.row
+        .col-12.mt-32.mt-md-60.mt-lg-80 
+            h3.text-center.c-blue Зарегистрированные чеки
+        .col-12.my-25.my-md-50
+            +img("icons/check-not-upload.svg",'Электронный сертификат в МВидео','mx-a d-block','40')
+            p.fs-large.c-blue.text-center.mt-24 Здесь будет история ваших чеков
+    #isCheck.row
+        .col-12.mt-32.mt-md-60.mt-lg-80 
+            h3.text-center.c-blue Зарегистрированные чеки
+        .col.mt-16.mt-md-32
+            table#tableCheck
+                thead 
+                    tr
+                        th Дата розыгрыша
+                        th Дата и номер чека
+                        th ФН, ФД, ФПД
+                        th Фото чека
+                        th Статус
+                tbody 
+                    tr
+                        td 14.12.2023
+                        td №12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image") Смотреть
+                        td 
+                            .status.status_wait На проверке
+                    tr
+                        td 14.12.2023
+                        td №12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image") Смотреть
+                        td 
+                            .status.status_canceled Отклонен
+                    tr
+                        td 14.12.2023
+                        td №12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image") Смотреть
+                        td 
+                            .status.status_success  Принят
+                    tr
+                        td 14.12.2023
+                        td №12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image") Смотреть
+                        td 
+                            .status.status_wait На проверке
+                    tr
+                        td 14.12.2023
+                        td №12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image") Смотреть
+                        td 
+                            .status.status_canceled Отклонен
+                    tr
+                        td 14.12.2023
+                        td №12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image") Смотреть
+                        td 
+                            .status.status_success  Принят
+                    tr
+                        td 14.12.2023
+                        td №12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image") Смотреть
+                        td 
+                            .status.status_wait На проверке
+                    tr
+                        td 14.12.2023
+                        td №12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image") Смотреть
+                        td 
+                            .status.status_canceled Отклонен
+                    tr
+                        td 14.12.2023
+                        td №12755246
+                        td 383732 / 344546 / ......
+                        td 
+                            a(href="img/fiskal.jpg" data-fancybox="image") Смотреть
+                        td 
+                            .status.status_success  Принят
+
+        .col-12.mt-16.mt-md-32
+            .application 
+                .row.d-flex.justify-conter-between
+                    .col-md-4
+                        .application-desc
+                            .counter x2 
+                            +img("application-img.png",'','','')
+                            .label =
+                            span.ml-16
+                                p.fs-small.c-light-blue Заявка на розыгрыш 
+                                .title Еженедельных <br> призов
+                    .col-md-4
+                        .application-desc
+                            .counter x5 
+                            +img("application-img.png",'','','')
+                            .label =
+                            span.ml-16
+                                p.fs-small.c-light-blue Заявка на розыгрыш 
+                                .title ежемесячных <br> призов
+                    .col-md-4
+                        .application-desc
+                            .counter x10
+                            +img("application-img.png",'','','')
+                            .label =
+                            span.ml-16
+                                p.fs-small.c-light-blue Заявка на розыгрыш 
+                                .title главного приза
+                    .col-12.mx-a.d-flex.justify-content-center.my-16.my-md-30
+                        .status.status_wait Заявки формируются в момент подтверждения чека Организатором.

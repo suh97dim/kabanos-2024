@@ -1,0 +1,104 @@
+extends /layout/page
+
+block title
+    title Фотоконкурс
+
+block variables
+    - var page = 'photo'
+
+block content
+    .container.mt-40
+        .row
+            .col 
+                h1.text-center.c-blue Фотоконкурс
+            .cream-bg-content.mt-12.mt-md-24
+                // фото нет
+                #notPhoto.row
+                    .col-12.my-25.my-md-50
+                        +img("icons/photo-not-upload.svg",'','mx-a d-block','40')
+                        p.fs-large.c-blue.text-center.mt-24 Здесь будет истории  участников конкурса
+                // фото загружены. пользователь авторизован
+                #isPhotoAuth.row
+                    .col-sm-6.col-lg-4.mb-12.mb-sm-24
+                        .story-item 
+                            .story-img(style="background-image:url('img/image.jpg')")
+                                a(href="img/image.jpg" data-fancybox="image").play-image 
+                            .story-details 
+                                p.fs-medium.c-blue П****** М******
+                                p.fs-medium.c-blue.fw-bold Махачкала Цитадель Нарын-Кала
+                                .like 
+                                    button(action="#").like-btn.active 24
+                    .col-sm-6.col-lg-4.mb-12.mb-sm-24
+                        .story-item 
+                            .story-img(style="background-image:url('img/image.jpg')")
+                                a(href="img/image.jpg" data-fancybox="image").play-image 
+                            .story-details 
+                                p.fs-medium.c-blue П****** М******
+                                p.fs-medium.c-blue.fw-bold Махачкала Цитадель Нарын-Кала
+                                .like 
+                                    button(action="#").like-btn.active 24
+                    .col-sm-6.col-lg-4.mb-12.mb-sm-24
+                        .story-item 
+                            .story-img(style="background-image:url('img/image.jpg')")
+                                a(href="img/image.jpg" data-fancybox="image").play-image 
+                            .story-details 
+                                p.fs-medium.c-blue П****** М******
+                                p.fs-medium.c-blue.fw-bold Махачкала Цитадель Нарын-Кала
+                                .like 
+                                    button(action="#").like-btn.active 24
+                    .col-12.mt-12.mt-lg-0
+                        <ul class="pagination history-pagination" style="justify-content:center">
+                            <li class="paginate_button page-item active">
+                                <a href="#" aria-controls="appl" aria-role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a>
+                            </li>
+                            <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="appl" aria-role="link" data-dt-idx="1" tabindex="0" class="page-link">2</a>
+                            </li>
+                        </ul>
+                // фото загружены. пользователь не авторизован
+                #isPhotoAuth.row
+                    .col-12.mb-16.mb-md-24.mb-lg-32 
+                        .lk-info-block     
+                            p.fs-large.c-white <a (type="button" data-bs-toggle="modal" data-bs-target="#modal-reg")> Зарегистрируйся</a>  чтобы проголосвать за понравившуюся фотографию 
+                    .col-sm-6.col-lg-4.mb-12.mb-sm-24
+                        .story-item 
+                            .story-img(style="background-image:url('img/image.jpg')")
+                                a(href="img/image.jpg" data-fancybox="image").play-image 
+                            .story-details 
+                                p.fs-medium.c-blue П****** М******
+                                p.fs-medium.c-blue.fw-bold Махачкала Цитадель Нарын-Кала
+
+                    .col-sm-6.col-lg-4.mb-12.mb-sm-24
+                        .story-item 
+                            .story-img(style="background-image:url('img/image.jpg')")
+                                a(href="img/image.jpg" data-fancybox="image").play-image 
+                            .story-details 
+                                p.fs-medium.c-blue П****** М******
+                                p.fs-medium.c-blue.fw-bold Махачкала Цитадель Нарын-Кала
+
+                    .col-sm-6.col-lg-4.mb-12.mb-sm-24
+                        .story-item 
+                            .story-img(style="background-image:url('img/image.jpg')")
+                                a(href="img/image.jpg" data-fancybox="image").play-image 
+                            .story-details 
+                                p.fs-medium.c-blue П****** М******
+                                p.fs-medium.c-blue.fw-bold Махачкала Цитадель Нарын-Кала
+                    .col-12.mt-12.mt-lg-0
+                        <ul class="pagination history-pagination" style="justify-content:center">
+                            <li class="paginate_button page-item active">
+                                <a href="#" aria-controls="appl" aria-role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a>
+                            </li>
+                            <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="appl" aria-role="link" data-dt-idx="1" tabindex="0" class="page-link">2</a>
+                            </li>
+                        </ul>
+
+
+
+
+
+
+
+
+
+

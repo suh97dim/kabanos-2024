@@ -1,0 +1,638 @@
+
+//////////////////////////////////// табы личный кабинет    
+
+.tab-wrapper
+    border-radius: 8px
+
+.lk-content, .cream-bg-content
+    background: $cream
+    border-radius: 8px
+    padding: 0 80px 80px 80px
+.lk-content
+    border-radius: 0 0 8px 8px
+.cream-bg-content
+    border-radius: 8px
+    padding: 80px 80px 80px 80px
+.nav-lk
+    border-radius: 8px 8px 0 0
+    overflow: hidden
+
+.nav-lk-link
+    padding: 19px 0px
+    border: none
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: 600
+
+    background: $orange
+    font-size: 18px
+    color: #FF9F68
+    text-decoration: none
+    line-height: 120%
+
+    &.active
+        background-color: $cream
+        color: $light-blue
+        border-radius: 8px 8px 0 0
+        &:hover
+            color: $blue
+    &:hover
+        color: $cream
+//////////////////////////////////// IШаги в личном кабинете
+.lk-step
+    display: flex
+    position: relative
+    justify-content: center
+    &::before
+        left: 0
+        top: 50%
+        width: 100%
+        content: ''
+        position: absolute
+        border-bottom: 2px dashed #E8DBD4
+.lk-step-box
+    z-index: 1
+    font-size: 12px
+    padding: 11px 28px
+    position: relative
+    background-color: #FCE2D4
+    border-radius: 60px
+    color: $light-blue
+    letter-spacing: 0.6px
+    font-weight: 600
+    text-transform: uppercase
+
+//////////////////////////////////// табы фото. камера
+
+.camera-wrapper
+    width: 100%
+    height: 100%
+    background: $white
+.nav-lk-regChek-link
+    padding: 0 0 15px 0
+    width: 240px
+    font-size: 15px
+    font-weight: 700
+    text-decoration: none
+    color: #B5B0BB
+    display: flex
+    justify-content: center
+    border-bottom: 1px solid #DAC7BD
+    &:hover
+        color: $light-blue
+
+    &.active
+        padding: 0 0 13px 0
+        border-bottom: 3px solid $ligth-orange
+        opacity: 1
+        color: $light-blue
+
+///////////////////// список
+li.li-lk
+    font-size: 15px
+    font-style: normal
+    font-weight: 400
+    line-height: 146%
+    letter-spacing: -0.3px
+    margin-top: 5px
+
+////////////////// плашка вы выиграли приз
+.lk-info-block
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 16px 0 19px 0
+    border-radius: 30px
+    width: 100%
+    background-color: $blue
+    p
+        margin: 0
+        a
+            font-weight: 600
+            color: $white
+            cursor: pointer
+            text-decoration: underline!important
+            &:hover
+                color: $white
+                opacity: 0.7
+
+///////////////////// приз
+.lk-prize, .superprize
+    border-radius: 16px
+    background: #FFF
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
+    padding: 16px
+    display: flex
+    gap: 16px
+    align-items: center
+    height: 100%
+    align-items: stretch
+    p
+        margin: 0
+.lk-prize-img
+    img
+        width: 144px
+
+.prize-desc
+    padding: 10px 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    a
+        display: flex
+        gap: 2x
+        font-weight: 700
+        text-decoration: none
+        &:hover
+            opacity: 0.7
+            color: $ligth-orange
+.superprize
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    padding: 30px 0
+    position: relative
+    overflow: hidden
+    .img-right
+        position: absolute
+        width: 260px
+        z-index: 0
+        right: -40px
+        top: 0
+    .img-left
+        position: absolute
+        width: 204px
+        z-index: 0
+        left: -10px
+        top: -90px
+    .header
+        color: #051338
+        font-size: 96px
+        font-style: normal
+        margin-top: 10px
+        font-weight: 700
+        line-height: 70px
+        letter-spacing: -5.76px
+        text-transform: uppercase
+        z-index: 1
+    h6
+        font-weight: 400
+        text-transform: none
+        z-index: 1
+    a
+        display: flex
+        gap: 2x
+        font-weight: 700
+        text-decoration: none
+        z-index: 1
+        &:hover
+            opacity: 0.7
+            color: $ligth-orange
+
+//////////// тултип
+.tooltip
+    --bs-tooltip-opacity: 1
+
+.tooltip-inner
+    background: rgba(0, 0, 0, 0.80)
+    text-align: center
+    max-width: 400px
+    font-size: 12px
+    line-height: 120%
+    font-weight: 500
+    padding: 10px 16px 18px 16px
+    opacity: 1
+    border-radius: 8px
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .bs-tooltip-bottom .tooltip-arrow::before
+
+    border-bottom-color: rgba(0, 0, 0, 0.80)
+
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before, .bs-tooltip-left .tooltip-arrow::before
+
+    border-left-color: rgba(0, 0, 0, 0.80)
+
+/////персональные данные
+.lk-form
+    max-width: 800px
+.lk-attention
+    padding: 16px 24px
+    background-color: #FCE2D4
+    border-radius: 16px
+    display: flex
+    align-items: flex-start
+    gap: 8px
+    width: 100%
+    max-width: 800px
+    margin: 0 auto
+    p
+        margin: 0
+
+/////////////////////////////// таблица лк
+#tableApplications_filter, #tableCheck_filter
+    display: none
+#tableApplications, #tableCheck
+    width: 100%!important
+    thead
+        background-color: #FCE2D4
+    th
+        padding: 15px 10px 15px 25px
+        font-size: 15px
+        font-weight: 700
+        color: #051338
+    td
+        padding: 15px 10px 15px 25px
+        font-size: 15px
+        font-weight: 400
+        color: #051338
+
+    tr:nth-child(2n)
+        border-top: 1px solid #DAC7BD
+        border-bottom: 1px solid #DAC7BD
+    th:nth-child(1)
+        border-radius: 8px 0px 0px 8px
+
+    th:nth-last-child(1)
+        border-radius: 0px 8px 8px 0px
+#tableCheck
+    a
+        text-decoration: none
+        color:#051338
+        &:hover
+            opacity: 0.7
+            color: #051338
+
+.history-pagination
+    gap: 14px
+#tableApplications_wrapper, .history-pagination, #tableCheck_wrapper
+    .list-group-item::before,a.page-link
+        font-size: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+
+    a.page-link:hover
+        color: $blue!important
+
+    ul.pagination
+        display: flex
+        gap: 14px
+        margin-top: 30px
+
+    a.page-link
+        display: flex
+        width: 48px
+        height: 48px
+        padding: 13px 15px 14px
+        justify-content: center
+        align-items: center
+        border-radius: 48px!important
+        background: #FCE2D4!important
+        color: $blue!important
+        border: 0
+        font-size: 16px
+    .page-item.active .page-link
+        color: #fff!important
+        z-index: 0
+        background-color: #092562!important
+
+//////////////
+.application
+    border-radius: 16px
+    background: #FFF
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
+    padding: 12px 12px 28px 12px
+    height: 100%
+    padding: 20px 40px
+.application-desc
+    display: flex
+    align-items: center
+    justify-content: center
+    .title, .label
+        font-weight: 700
+        font-size: 18px
+        line-height: 120%
+
+    span
+        display: flex
+        flex-direction: column
+    p
+        margin: 0
+    img
+        width: 84px
+    .counter
+        width: 50px
+        height: 50px
+        display: flex
+        justify-content: center
+        font-size: 18px
+        font-weight: 700
+        color: white
+        align-items: center
+        border-radius: 100px
+        background-color: #092562
+        margin-right: -35px
+        margin-bottom: 0px
+.coming-dates
+    padding: 20px 60px
+    border-radius: 16px
+    width: 1016px
+    margin: 0 auto
+    border: 1px dashed $white
+    justify-content: space-between
+    display: flex
+    align-items: center
+.dates-list
+    display: flex
+    gap: 80px
+.coming-dates__title
+    color: #FFF
+    font-size: 15px
+    font-weight: 400
+.dates-list__title
+    color: #fff
+    font-size: 15px
+.dates-list__desc
+    color: #FFF
+    font-size: 20px
+    font-weight: 700
+.dates-list__item
+.fiskal-link
+    color: #FB6C1B
+    font-size: 18
+    font-style: normal
+    font-weight: 600
+    line-height: 120%
+    display: block
+    text-align: center
+    &:hover
+        color: #FB6C1B
+        opacity: 0.7
+        text-decoration: none
+@media screen and (max-width: 1100px)
+    .coming-dates
+        width: 100%
+        padding: 20px 40px
+    .dates-list
+        gap: 40px
+    .application
+
+        padding: 20px 20px
+    .application-desc
+        flex-direction: column
+        padding-top: 20px
+        .label
+            transform: rotate(90deg)
+        img
+            width: 84px
+        .counter
+            margin-right: 90px
+            margin-bottom: -72px
+    .lk-content
+        padding: 0 30px 30px 30px
+    .cream-bg-content
+        padding: 50px 30px 30px
+    #tableApplications, #tableCheck
+        min-width: 980px
+        th
+            padding: 15px 10px 15px 20px
+        td
+            padding: 15px 10px 15px 20px
+    .superprize
+        .img-right
+            position: absolute
+            width: 220px
+            z-index: 0
+            right: -40px
+            top: 0
+        .img-left
+            left: -30px
+            top: -90px
+            width: 180px
+        .header
+            line-height: 50px
+            font-size: 70px
+    .lk-info-block
+
+        p
+            font-size: 18px
+    .lk-prize
+        flex-direction: column
+    .prize-desc
+        padding: 0
+
+@media screen and (max-width: 920px)
+    .superprize
+        .img-right
+            position: absolute
+            width: 200px
+            z-index: 0
+            right: -70px
+            top: 0
+@media screen and (max-width: 768px)
+
+
+    .coming-dates 
+        width: 100%
+        padding: 14px 14px
+        flex-direction: column
+        align-items: center
+        border-radius: 10px
+        gap: 14px
+    .dates-list
+        gap: 40px
+    #tableApplications_wrapper, .history-pagination, #tableCheck_wrapper
+        a.page-link
+            width: 36px
+            height: 36px
+            font-size: 14px
+    .application
+        .status
+            background-image: none
+            padding: 0
+            text-align: center
+    .application-desc
+        flex-direction: row
+        padding-top: 0
+
+        .label
+            transform: none
+        img
+            width: 84px
+        .counter
+            margin-right: -35px
+            margin-bottom: -0px
+    #tableApplications, #tableCheck
+
+        th
+            font-size: 14px
+        td
+            font-size: 14px
+    .tab-wrapper
+        margin-left: -15px
+        margin-right: -15px
+    .superprize
+        .img-right
+            position: absolute
+            width: 170px
+            z-index: 0
+            right: -70px
+            top: 30px
+        .img-left
+            left: -40px
+            top: -70px
+            width: 150px
+        .header
+            line-height: 40px
+            font-size: 60px
+    .lk-prize
+        flex-direction: row
+
+    .prize-desc
+        padding: 10px 0
+    .lk-content
+        padding: 0 30px 30px 30px
+    .cream-bg-content
+        padding: 30px
+    .nav-lk-link
+        padding: 15px 0px
+        font-size: 16px
+
+    .nav-lk-regChek-link
+        width: 140px
+    .lk-info-block
+        padding: 16px 20px 19px 20px
+        p
+            font-size: 15px
+@media screen and (max-width: 575px)
+
+    .dates-list__item
+        text-align: center
+
+    .dates-list
+        flex-direction: row
+        gap: 10px
+        flex-wrap: wrap
+        justify-content: center
+
+    .superprize
+        padding: 80px 0
+        .img-right
+            position: absolute
+            width: 130px
+            z-index: 0
+            right: -40px
+            top: -20px
+        .img-left
+            left: 0px
+            top: unset
+            bottom: -20px
+            width: 70px
+            transform: rotate(20deg)
+        .header
+            line-height: 40px
+            font-size: 50px
+            letter-spacing: -3px
+    .tab-wrapper
+        padding: 10px
+        background-color: $orange
+    .nav-lk-link
+        padding: 13px 0px
+        font-size: 15px
+        background-color: $orange
+        &.active
+            background-color: $cream
+            color: $light-blue
+            border-radius: 8px
+
+    .lk-content
+        margin-top: 10px
+        border-radius: 8px 8px 8px 8px
+        padding: 0 20px 20px 20px
+    .cream-bg-content
+        border-radius: 8px
+        padding: 20px 20px 20px
+    //////////////////////////////////// IШаги в личном кабинете
+    .lk-step-box
+        z-index: 1
+        font-size: 11px
+        padding: 9px 20px
+        position: relative
+        background-color: #FCE2D4
+        border-radius: 60px
+        color: $light-blue
+        letter-spacing: 0.6px
+        font-weight: 600
+        text-transform: uppercase
+
+    .nav-lk-regChek-link
+        padding: 0 0 13px 0
+        width: 120px
+        font-size: 14px
+        &.active
+            padding: 0 0 11px 0
+    .lk-info-block
+        padding: 16px 20px 19px 20px
+        border-radius: 4px
+        align-items: flex-start
+        p
+            font-size: 14px
+    .lk-attention
+        padding: 16px 16px
+        background-color: #FCE2D4
+        border-radius: 4px
+
+        p
+            font-size: 14px
+    .application-desc
+        flex-direction: row
+        padding-top: 20px
+        .label, .title
+            font-size: 16px
+        img
+            width: 70px
+        .counter
+            width: 45px
+            height: 45px
+            font-size: 16px
+
+@media screen and (max-width: 510px)
+    .lk-prize
+        flex-direction: column
+        padding-left: 10px
+        a
+            margin-top: 10px
+    .prize-desc
+        padding: 0
+@media screen and (max-width: 350px)
+    .application-desc
+        flex-direction: row
+        padding-top: 20px
+        .label, .title
+            font-size: 16px
+        img
+            width: 70px
+        .counter
+            width: 40px
+            height: 40px
+            font-size: 14px
+            margin-right: -35px
+            margin-bottom: -0px
+    .superprize
+        padding: 80px 0
+        .img-right
+            position: absolute
+            width: 130px
+            z-index: 0
+            right: -40px
+            top: -20px
+        .img-left
+            left: 0px
+            top: unset
+            bottom: -20px
+            width: 70px
+            transform: rotate(20deg)
+        .header
+            line-height: 10px
+            font-size: 30px
+            letter-spacing: -3px
