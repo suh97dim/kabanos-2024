@@ -131,6 +131,13 @@
                 .col-12.mt-30.mt-md-50
                     h3.text-center.c-blue Данные для уплаты налогов
                 .col-12.mt-16.mt-md-30.mb-16.mb-md-24 
+                    h5.text-center.c-blue Данные для отправки главное приза
+                .col-12.mb-16.mb-md-24.pos-r    
+                    .form-floating
+                        input(type="text" placeholder="Номер карты" required  id="card" ).form-control.mask-card-number
+                        label(for="card")  Номер карты
+                        .invalid-feedback Обязательное поле
+                .col-12.mt-16.mt-md-30.mb-16.mb-md-24 
                     h5.text-center.c-blue Паспортные данные
                 .col-sm-6.col-md-4.mb-16.mb-md-24.pos-r    
                     .form-floating

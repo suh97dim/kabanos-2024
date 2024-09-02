@@ -146,8 +146,11 @@ block content
 
 
             .row
+               
                 .map-wrapper
                     include /modules/map
+                .col-12.mt-12 
+                    +img("icons/swipe-light.svg",'',' swipe-img d-block d-md-none mx-a','')    
             // если нет историй
             .row.mt-30.mt-md-60
                 .col-12
@@ -339,6 +342,8 @@ block content
                                 td В******
                                 td Санкт-Петербург
                                 td +7 (999) *** ** 99)
+                .col-12.mt-12 
+                    +img("icons/swipe-light.svg",'',' swipe-img d-block d-lg-none mx-a','') 
 
     #faq.container-fluid.py-80
         .container

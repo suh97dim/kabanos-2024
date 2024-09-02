@@ -536,7 +536,36 @@ input#search::-moz-placeholder
 	.page-item.active .page-link
 		color: #fff!important
 		background-color: #FF8925!important
+.swipe-img
+
+	width: 30px
+	display: block
+	animation-name: swipe
+	animation-duration: 3s
+	animation-iteration-count: infinite
+	opacity: 1
+	pointer-events: none
+	fill: red
+
+@keyframes swipe
+	0%
+		transform: translatex(0) rotate(0)
+
+	25%
+		transform: translatex(100%) rotate(30deg)
+
+	50%
+		transform: translatex(0) rotate(0)
+
+	75%
+		transform: translatex(100%) rotate(30deg)
+
+	100%
+		transform: translatex(0) rotate(0)
+
 #Central, #Volga, #Urals, #Siberian, #FarEastern, #Northwestern, #South, #Central, #Kavkaz
+	stroke: transparent
+	stroke-width: 4px
 	&:hover
 		opacity: 0.5
 .map-wrapper
@@ -823,6 +852,7 @@ ol li:before
 		flex-direction: column
 		align-items: center
 		gap: 5px
+		
 		.prize-mp-img-wrapper
 
 			img
@@ -874,7 +904,9 @@ ol li:before
 		.counter
 			font-size: 14px
 	.main-prize-mp
-		padding: 60px 0 89px 0
+		padding: 60px 0 60px 0
+		background-image: url('../img/bg/main-page-prize-5-bg.png')
+
 		gap: 20px
 		.label
 			display: flex

@@ -17,6 +17,7 @@ $(function () {
       }
       // маска для номера телефона
       $(".mask-phone").mask("+7 (999) 999-99-99");
+      $('.mask-card-number').mask('9999 9999 9999 9999');
       $.fn.DataTable.ext.pager.numbers_length = 5;
       $('#tableWinners, #tableApplications, #tableCheck').DataTable({ ordering: false, bLengthChange: false, info: false, pageLength: 6, pagingType: "numbers" });
 
@@ -105,7 +106,7 @@ $(function () {
       for (let i = 0; i < regions.length; i++) {
             $("#" + regions[i].name).tooltip({
                   title: regions[i].label,
-                  trigger: 'manual',
+                  trigger: 'hover',
                   container: 'body',
                   placement: 'auto'
             })
@@ -131,7 +132,7 @@ $(function () {
       }
 
 
-    
+
       // логотипы строка
       if ($(window).width() < 764) {
             $('.marquee').marquee({
@@ -230,8 +231,8 @@ const swiper = new Swiper('.swiper-products', {
       },
       pagination: {
             el: '.swiper-pagination',
-            
-        }
+
+      }
 
 });
 
